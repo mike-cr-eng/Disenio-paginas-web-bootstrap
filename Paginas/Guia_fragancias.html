@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Ana María Faerron, Michael Maroto, Julian Rodríguez "
+    />
+    <meta
+      name="description"
+      content="Descubre los tipos de fragancias, familias olfativas, notas, duración, layering y cómo elegir el perfume ideal."
+    />
+    <meta
+      name="keywords"
+      content="familias aromas, notas olfativas,duración, layering, ph"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Guía de Fragancias | Celestial & Woods</title>
+    <link href="../Css/Styles.css" rel="stylesheet" />
+    <link href="../Css/GuiaFragancias.css" rel="stylesheet" />
+    <!--Se pone de último para que tenga prioridad-->
+
+    <!--Para usar bootstrap (iconos)-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script src="https://code.iconify.design/iconify-icon/3.0.2/iconify-icon.min.js"></script>
+  </head>
+
+  <body>
+    <!--------------------------------------------------------->
+    <!------------------------MENU----------------------------->
+    <!--------------------------------------------------------->
+
+    <header class="main-header">
+      <!-- Logo de la marca, centrado -->
+      <div class="header-logo">
+        <a href="../Index.html">
+          <img
+            src="../Multimedia/Img/Logo_Celestial_Woods.png"
+            alt="Logo Celestial & Woods"
+          />
+        </a>
+      </div>
+
+      <button class="hamburger-menu" id="abrir">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <nav class="header-nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../Index.html" class="nav-link"
+              ><i class="bi bi-house-door"></i> Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Catalogo_Productos.html" class="nav-link">
+              <i class="fa-solid fa-spray-can-sparkles"></i> Catálogo</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="fa-solid fa-leaf"></i> Guía de Fragancias</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Preguntas.html" class="nav-link">
+              <i class="bi bi-question-circle"></i> Preguntas Frecuentes</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Informacion.html" class="nav-link"
+              ><i class="bi bi-person"></i> Quienes somos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Contacto.html" class="nav-link"
+              ><i class="bi bi-envelope"></i> Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--------------------------------------------------------->
+    <!------------------------MAIN----------------------------->
+    <!--------------------------------------------------------->
+
+    <main>
+      <!--Parte introductoria-->
+
+      <section class="guia-fragancias">
+        <img
+          src="../Multimedia/pexels-behrouz-alimardani-152148858-10873814.webp"
+          alt="Guía de fragancias"
+        />
+
+        <div class="guia-contenido">
+          <h1>
+            Guía de <br />
+            Fragancias
+          </h1>
+          <p>
+            Todo lo que necesitas saber para elegir el perfume ideal para ti.
+            Descubre los tipos de fragancias, sus notas y consejos para
+            aprovecharlas al máximo.
+          </p>
+        </div>
+
+        <nav class="breadcrumb">
+          <a href="../Index.html" class="breadcrumb-link">Inicio</a>
+          <span class="breadcrumb-separator">&gt;</span>
+          <span class="breadcrumb-current">Guía Fragancias</span>
+        </nav>
+      </section>
+
+      <!-- Aquí se explica los Beneficios-->
+      <section class="guide-benefits">
+        <h2>¿Por qué esta guía es importante para ti?</h2>
+        <ul>
+          <li>
+            <i class="bi bi-check2-circle"></i>Te ayuda a elegir aromas que van
+            con tu personalidad, estilos y ocasión.
+          </li>
+          <li>
+            <i class="bi bi-check2-circle"></i>Entiendes cuánto dura el aroma y
+            cómo se comporta en tu piel.
+          </li>
+          <li>
+            <i class="bi bi-check2-circle"></i>Aprendes a usar y combinar aromas
+            para aprovecharlos al máximo.
+          </li>
+          <li>
+            <i class="bi bi-check2-circle"></i>Conoces como cuidar tus
+            fragancias para que duren más.
+          </li>
+        </ul>
+      </section>
+
+      <!--Inicio de el acordión para la parte movil-->
+
+      <!-- 1. Aquí se explica las Familias -->
+
+      <section class="accordion familias">
+        <!--El checkbox funciona como un interruptor que permite controlar
+          si el contenido del acordeón está abierto o cerrado.-->
+        <input type="checkbox" id="family" unchecked />
+
+        <!--El <label> contiene el texto que el usuario puede seleccionar.
+        El atributo "for" indica a qué <input> está relacionado el label.
+        El valor de "for" debe ser igual al valor de "id" del checkbox
+        para que, al hacer clic en el texto, se active o desactive
+        el checkbox correspondiente.-->
+        <label for="family">Familias de Aromas</label>
+
+        <div class="content">
+          <p>
+            Cada familia tiene su propio carácter y puede despertar diferentes
+            emociones.
+          </p>
+
+          <article>
+            <!--Use article porque cada contenido puede entenderse por sí solo-->
+            <iconify-icon icon="ion:flower"></iconify-icon>
+            <h3>Floral</h3>
+            <p>Romántica, femenina y elegante.</p>
+          </article>
+
+          <article>
+            <iconify-icon icon="healthicons:fruits"></iconify-icon>
+            <h3>Frutal</h3>
+            <p>Jugosa, dulce y alegre.</p>
+          </article>
+
+          <article>
+            <iconify-icon icon="tabler:lemon"></iconify-icon>
+            <h3>Cítrica</h3>
+            <p>Fresca, vibrante y energizante.</p>
+          </article>
+
+          <article>
+            <iconify-icon icon="mdi:pine-tree"></iconify-icon>
+            <h3>Aromática</h3>
+            <p>Herbal, natural y equilibrada.</p>
+          </article>
+
+          <article>
+            <iconify-icon icon="mdi:flower-lotus"></iconify-icon>
+            <h3>Oriental</h3>
+            <p>Cálida, intensa y sofisticada.</p>
+          </article>
+
+          <article>
+            <iconify-icon icon="game-icons:wrapped-sweet"></iconify-icon>
+            <h3>Gourmand</h3>
+            <p>Dulce, acogedora y adictiva.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2. Aquí se explica las Notas -->
+
+      <section class="accordion notas">
+        <input type="checkbox" id="notas" unchecked />
+        <label for="notas">Notas Olfativas</label>
+
+        <div class="content">
+          <p>
+            Los aromas se sienten en 3 etapas. Así evoluciona una fragancia en
+            tu piel:
+          </p>
+
+          <article>
+            <h3>Notas de Salida</h3>
+
+            <p>
+              Son las primeras que percibes al aplicar el perfume.Son frescas y
+              ligeras.
+            </p>
+
+            <p>Duración: 5-15 min</p>
+          </article>
+
+          <article>
+            <h3>Notas de Corazón</h3>
+
+            <p>
+              Representan el alma de la fragancia. Aportan carácter y se
+              perciben después de que las notas de salida se desvanecen.
+            </p>
+            <p>Duración: 20 min - 2 h</p>
+          </article>
+
+          <article>
+            <h3>Notas de Fondo</h3>
+            <p>Son las más duraderas y profundas.</p>
+            <p>
+              Se perciben cuando las notas de corazón comienzan a desaparecer.
+            </p>
+            <p>Duración: Más de 2 h</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Aquí se explica un Consejo -->
+      <aside>
+        <!-- LO puse porque se usa para información complementaria, es decir, información que ayuda al usuario, pero no forma parte del contenido principal.-->
+        <!--si se borra no afecta al contenido principal-->
+
+        <h2><i class="bi bi-lightbulb"></i>Consejo Rápido</h2>
+
+        <p>
+          Prueba siempre el perfume sobre tu piel y no únicamente en una tira de
+          papel.
+        </p>
+      </aside>
+
+      <!--3. Aquí se explica Duración de los perfumes-->
+
+      <section class="accordion duration">
+        <input type="checkbox" id="longevity" unchecked />
+        <label for="longevity">¿Cúanto dura un aroma?</label>
+
+        <div class="content">
+          <p>La duración depende de la concentración y del tipo de piel</p>
+
+          <!--Aquí se creó una tabla-->
+          <table border="1">
+            <tr>
+              <th>TIPO</th>
+              <td>PARFUM</td>
+              <td>EAU DE PARFUM</td>
+              <td>EAU DE TOILETTE</td>
+              <td>EAU DE COLOGNE</td>
+              <td>EU FRAICHE</td>
+            </tr>
+            <tr>
+              <th>CONCENTRACIÓN</th>
+              <td>20-30%</td>
+              <td>15-20%</td>
+              <td>5-15%</td>
+              <td>2-5%</td>
+              <td>1-3%</td>
+            </tr>
+
+            <tr>
+              <th>DURACIÓN</th>
+              <td>6-8 h</td>
+              <td>4-6 h</td>
+              <td>2-4 h</td>
+              <td>2 h</td>
+              <td>1-2 h</td>
+            </tr>
+          </table>
+
+          <h3>¿Para que sirve la concentración?</h3>
+          <p>Te ayuda a elegir la ocasión y cuánto quieres que dure el aroma</p>
+
+          <aside>
+            <h3>¿Qué significa "Elixir"?</h3>
+
+            <p>
+              <strong>Elixir</strong> no es una categoría oficial de
+              concentración. Muchas marcas utilizan este nombre para identificar
+              una versión más intensa de una fragancia, con mayor duración y
+              proyección.
+            </p>
+
+            <p>Su concentración puede variar según la marca.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 4. Aquí se explica PH-->
+
+      <section class="accordion ph">
+        <input type="checkbox" id="ph" unchecked />
+        <label for="ph">¿Qué es el ph?</label>
+
+        <div class="content">
+          <p>
+            El pH es la medida que indica si la piel es más ácida, neutra o
+            alcalina.
+          </p>
+          <p>
+            Este influye en cómo evoluciona el perfume sobre la piel, afectando
+            su aroma y duración.
+          </p>
+          <h3>¿Por qué es importante?</h3>
+          <p>
+            Dos personas pueden usar el mismo aroma y oler diferente. Conocer tu
+            piel te ayuda a elegir mejor.
+          </p>
+        </div>
+      </section>
+
+      <!-- 5. Aquí se explica Tipos de perfumería-->
+      <section class="accordion">
+        <input type="checkbox" id="types" unchecked />
+        <label for="types">Tipos de perfumería</label>
+
+        <div class="content">
+          <p>
+            Conoce las principales categorías según el origen, estilo o forma de
+            comercialización de las fragancias.Independiente de la concentración
+          </p>
+
+          <article>
+            <h3>Perfumería de diseñador</h3>
+            <p>Son perfumes creados por marcas reconocidas de moda y lujo</p>
+
+            <h4>Ejemplos:</h4>
+            <ul>
+              <li>Dior</li>
+              <li>Chanel</li>
+              <li>Prada</li>
+              <li>Yves Saint Laurent</li>
+            </ul>
+
+            <h4>Características:</h4>
+            <ul>
+              <li>Calidad alta.</li>
+              <li>Pensados para gustar al público en general.</li>
+              <li>Fácil disponibilidad.</li>
+              <li>Excelente relación calidad-precio</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Perfumería Nicho</h3>
+            <p>Está pensada en crear perfumes exclusivos y artísticos</p>
+
+            <h4>Características:</h4>
+            <ul>
+              <li>Ingredientes de mayor calidad.</li>
+              <li>Producción limitada.</li>
+              <li>Aromas poco comunes.</li>
+              <li>Mayor exclusividad</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Perfumería Árabe</h3>
+            <p>
+              Se caracteriza por utilizar ingredientes intensos y de gran
+              duración
+            </p>
+
+            <h4>Notas comunes:</h4>
+            <ul>
+              <li>Oud</li>
+              <li>Rosa</li>
+              <li>Azafrán</li>
+              <li>Ambar</li>
+              <li>Almizcles</li>
+            </ul>
+
+            <h4>Características:</h4>
+            <ul>
+              <li>Muy buena duración.</li>
+              <li>Gran proyección.</li>
+              <li>Excelente relación calidad-precio</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Perfumería Ártesanal</h3>
+            <p>
+              Fragancias elaboradas por pequeños perfumistas o casas
+              Independientes
+            </p>
+
+            <h4>Características:</h4>
+            <ul>
+              <li>Producción ilimitada.</li>
+              <li>Mayor creatividad.</li>
+              <li>Ingredientes seleccionados</li>
+              <li>Diseños únicos</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Perfumería de catálogo</h3>
+            <p>Perfumes vendidos mediante distribuidoras o venta directa</p>
+
+            <h4>Características:</h4>
+            <ul>
+              <li>Precio accesible.</li>
+              <li>Gran variedad.</li>
+              <li>Inspiración de perfumes famosos.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Perfumería Nicho o alta gama</h3>
+            <p>
+              No significan que sea caro. Se refiere a perfumes que destacan
+              por:
+            </p>
+
+            <ul>
+              <li>Materias primas de excelente calidad.</li>
+              <li>Mejor construcción de la fragancia.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!--6. Aquí se explica donde Aplicar el perfume-->
+
+      <section class="accordion Aplicacion">
+        <input type="checkbox" id="apply" unchecked />
+        <label for="apply">¿Dónde aplicar el perfume?</label>
+
+        <div class="content">
+          <ul>
+            <li>Detrás de las orejas.</li>
+            <li>Cuello.</li>
+            <li>Muñecas.</li>
+            <li>Interior del codo.</li>
+            <li>Detrás de las rodillas.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. Aquí se explica como escoger mi perfume ideal-->
+
+      <section class="accordion">
+        <input type="checkbox" id="choose" unchecked />
+        <label for="choose">¿Cómo escoger tu perfume ideal?</label>
+
+        <div class="content">
+          <p>
+            Elegir un perfume no depende únicamente de cuál huela mejor. También
+            influyen la ocasión, el clima, la hora del día, la concentración y
+            las características de tu piel.
+          </p>
+
+          <article>
+            <h3>Para el trabajo o la universidad</h3>
+            <ul>
+              <li>
+                Familias recomendadas: Cítricas, Aromáticas y Florales suaves.
+              </li>
+              <li>
+                Concentración recomendada: Eau de Toilette (EDT) o Eau de
+                Cologne(EDC).
+              </li>
+              <li>Busca aromas frescos, limpios y discretos.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Para el día</h3>
+            <ul>
+              <li>Familias recomendadas: Cítricas, Frutales y Aromáticas.</li>
+              <li>Concentración recomendada: Eau de Toilette.</li>
+              <li>Ideales para climas cálidos y actividades al aire libre.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Para la noche</h3>
+            <ul>
+              <li>Familias recomendadas: Orientales, Gourmand y Amaderadas.</li>
+              <li>Concentración recomendada: Eau de Parfum o Parfum.</li>
+              <li>Son aromas intensos, cálidos y envolventes.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Para ocasiones especiales</h3>
+
+            <ul>
+              <li>Prefiere perfumes con mayor duración.</li>
+              <li>Las familias Orientales y Gourmand suelen destacar.</li>
+              <li>Un Eau de Parfum o Parfum suele ofrecer mejor desempeño.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Según el clima</h3>
+
+            <ul>
+              <li>
+                <strong>Clima cálido:</strong> Cítricos, Aromáticos o Acuáticos.
+              </li>
+              <li>
+                <strong>Clima frío:</strong> Orientales, Gourmand o Amaderados.
+              </li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Según tu tipo de piel</h3>
+
+            <ul>
+              <li>
+                Las pieles grasas suelen conservar el aroma por más tiempo.
+              </li>
+              <li>
+                Las pieles secas pueden requerir reaplicar el perfume o hidratar
+                la piel antes de usarlo.
+              </li>
+              <li>
+                El pH también puede hacer que un mismo perfume huela diferente
+                en cada persona.
+              </li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Antes de comprar</h3>
+
+            <ul>
+              <li>Prueba el perfume sobre tu piel.</li>
+              <li>
+                Espera al menos 20 o 30 minutos para conocer las notas de
+                corazón.
+              </li>
+              <li>No pruebes demasiados perfumes al mismo tiempo.</li>
+              <li>
+                Elige el aroma con el que te sientas cómodo e identificado.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- 8. Aquí se explica el Layering-->
+      <section class="accordion Layering">
+        <input type="checkbox" id="layering" unchecked />
+        <label for="layering">Layering</label>
+
+        <div class="content">
+          <p>
+            Combina productos de la misma fragancia para aumentar la duración e
+            intensidad del aroma.
+          </p>
+        </div>
+      </section>
+
+      <!--9. Aquí se explica como Conservar mejor un perfume-->
+      <section class="accordion Conserva">
+        <input type="checkbox" id="conservation" unchecked />
+        <label for="conservation">¿Cómo conservar tus aromas?</label>
+
+        <div class="content">
+          <ul>
+            <li>Evita la luz directa.</li>
+            <li>
+              <i class="bi bi-thermometer-low"></i>Mantén el perfume lejos del
+              calor.
+            </li>
+            <li>Evita la humedad.</li>
+            <li>Guárdalo en un lugar fresco y seco.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!--------------------------------------------------------->
+    <!-------------------PIE DE LA PÁGINA---------------------->
+    <!--------------------------------------------------------->
+
+    <footer>
+      <!-- Logo de la marca -->
+      <img
+        class="logo"
+        src="../Multimedia/Img/Logo_Celestial_Woods.png"
+        alt="Logo Celestial & Woods"
+      />
+
+      <section class="footer-menu">
+        <h3>Menú Navegación</h3>
+        <ul class="nav-list-footer">
+          <li class="nav-item-footer">
+            <a href="../Index.html" class="nav-link-footer"> Inicio</a>
+          </li>
+          <li class="nav-item-footer">
+            <a
+              href="../Paginas/Catalogo_Productos.html"
+              class="nav-link-footer"
+            >
+              Catálogo</a
+            >
+          </li>
+          <li class="nav-item-footer">
+            <a href="#" class="nav-link-footer active"> Guía de Fragancias</a>
+          </li>
+          <li class="nav-item-footer">
+            <a href="../Paginas/Preguntas.html" class="nav-link-footer">
+              Preguntas Frecuentes</a
+            >
+          </li>
+          <li class="nav-item-footer">
+            <a href="../Paginas/Informacion.html" class="nav-link-footer">
+              Quienes somos</a
+            >
+          </li>
+          <li class="nav-item-footer">
+            <a href="../Paginas/Contacto.html" class="nav-link-footer">
+              Contacto</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer-social">
+        <h3>Síguenos</h3>
+
+        <nav aria-label="Redes sociales">
+          <a href="#" class="social-icon"> <i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"> <i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+        </nav>
+      </section>
+
+      <!-- Compra por WhatsApp -->
+      <section class="footer-whatsapp">
+        <i class="bi bi-whatsapp"></i>
+
+        <div class="left">
+          <h3>Compra por WhatsApp</h3>
+          <a href="#"> +506 6000 0000 </a>
+        </div>
+      </section>
+
+      <!-- Horarios -->
+      <section class="footer-hours">
+        <h3><i class="bi bi-clock"></i> Horario de atención</h3>
+
+        <ul>
+          <li>
+            <i class="bi bi-calendar"></i
+            ><strong> Lunes a Viernes:</strong> 8:00 a.m. - 6:00 p.m.
+          </li>
+          <li>
+            <i class="bi bi-calendar"></i><strong> Sábado:</strong> 8:00 a.m. -
+            6:00 p.m.
+          </li>
+          <li>
+            <i class="bi bi-calendar"></i><strong> Domingo:</strong> Cerrado
+          </li>
+        </ul>
+      </section>
+
+      <!-- Información legal -->
+      <section class="footer-legal">
+        <nav aria-label="Información legal">
+          <ul class="legal-list">
+            <li class="legal-item">
+              <a href="#" class="legal-link">
+                <span class="legal-left">
+                  <i class="bi bi-shield-check"></i>
+                  <span>Términos y condiciones</span>
+                </span>
+
+                <i class="bi bi-chevron-right"></i>
+              </a>
+            </li>
+
+            <li class="legal-item">
+              <a href="#" class="legal-link">
+                <span class="legal-left">
+                  <i class="bi bi-lock"></i>
+                  <span>Políticas de privacidad</span>
+                </span>
+
+                <i class="bi bi-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Copyright -->
+      <section class="footer-copy">
+        <p>
+          &copy; 2026 Celestial & Woods. <br />
+          Todos los derechos reservados.
+        </p>
+      </section>
+    </footer>
+    <script src="../Java/main.js"></script>
+    <!--Se pone al final porque ocupa primero haber leido todo el html-->
+  </body>
+</html>

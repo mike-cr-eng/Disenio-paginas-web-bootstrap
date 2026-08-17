@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Ana María Faerron, Michael Maroto, Julian Rodríguez "
+    />
+    <meta
+      name="description"
+      content="Explora nuestro catálogo de perfumes para hombre, mujer y unisex."
+    />
+    <meta
+      name="keywords"
+      content="perfumes, catálogo de perfumes, fragancias, perfumes para hombre, perfumes para mujer, perfumes unisex, aromas, notas olfativas, perfumes originales, perfumes de diseñador, perfumes de nicho, fragancias florales, fragancias cítricas, fragancias amaderadas, fragancias orientales, perfumes dulces"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../Css/Catalogo.css" rel="stylesheet" />
+    <link href="../Css/Styles.css" rel="stylesheet" />
+    <!--Se pone de último para que tenga prioridad-->
+
+    <title>Catálogo Productos | Celestial & Woods</title>
+    
+    <!--Para usar bootstrap (iconos)-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--------------------------------------------------------->
+    <!------------------------MENU----------------------------->
+    <!--------------------------------------------------------->
+
+    <header class="main-header">
+      <!-- Logo de la marca, centrado -->
+      <div class="header-logo">
+        <a href="../Index.html">
+          <img
+            src="../Multimedia/Img/Logo_Celestial_Woods.png"
+            alt="Logo Celestial & Woods"
+          />
+        </a>
+      </div>
+
+      <button class="hamburger-menu" id="abrir">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <nav class="header-nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../Index.html" class="nav-link active"
+              ><i class="bi bi-house-door"></i> Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-spray-can-sparkles"></i> Catálogo</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Guia_fragancias.html" class="nav-link">
+              <i class="fa-solid fa-leaf"></i> Guía de Fragancias</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Preguntas.html" class="nav-link">
+              <i class="bi bi-question-circle"></i> Preguntas Frecuentes</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Informacion.html" class="nav-link"
+              ><i class="bi bi-person"></i> Quienes somos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Contacto.html" class="nav-link"
+              ><i class="bi bi-envelope"></i> Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <!-- Breadcrumbs-->
+      <nav class="breadcrumb">
+        <a href="../Index.html" class="breadcrumb-link">Inicio</a>
+        <span class="breadcrumb-separator">&gt;</span>
+        <span class="breadcrumb-current">Catálogo Productos</span>
+      </nav>
+
+      <!-- Barra de búsqueda del catálogo-->
+      <section class="catalog-header">
+        <div class="catalog">
+          <h1>Catálogo de Productos</h1>
+          <label for="search">Buscar:</label>
+          <input
+            type="text"
+            id="search"
+            placeholder="Buscar productos..."
+            maxlength="100"
+          />
+        </div>
+      </section>
+
+      <!-- Sección de filtros-->
+      <button
+        class="filtro-hamburguesa"
+        id="abrir-filtros"
+        type="button"
+        aria-controls="panel-filtros"
+        aria-expanded="false"
+      >
+        <i class="bi bi-funnel"></i>
+        <span>Mostrar filtros</span>
+      </button>
+
+      <section class="filter-section" id="panel-filtros">
+        <h2>Filtrar por:</h2>
+
+        <!-- Filtro de rango de precio -->
+        <div class="filter-options">
+          <label for="price-range"><strong>Precio:</strong></label>
+          <input
+            type="number"
+            class="filtro-precio"
+            data-tipo="min"
+            value="1"
+          />
+          <input
+            type="number"
+            class="filtro-precio"
+            data-tipo="max"
+            value="1000"
+          />
+        </div>
+
+        <!-- Filtro por tipo de producto-->
+        <div class="filter-options">
+          <p class="category"><strong>Tipos:</strong></p>
+
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="todas"
+            value="todas"
+          />
+          <label for="todas">Todas</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="perfumes"
+            value="perfumes"
+          />
+          <label for="perfumes">Perfumes</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="colonias"
+            value="colonias"
+          />
+          <label for="colonias">Colonias</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="elixires"
+            value="elixires"
+          />
+          <label for="elixires">Elixires</label>
+        </div>
+
+        <!-- Filtro por marcas comerciales -->
+        <div class="filter-options">
+          <p class="category"><strong>Marcas:</strong></p>
+
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="todas-marca"
+            value="todas"
+          />
+          <label for="todas-marca">Todas</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="dior"
+            value="dior"
+          />
+          <label for="dior">Dior</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="valentino"
+            value="valentino"
+          />
+          <label for="valentino">Valentino</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="lattafa"
+            value="lattafa"
+          />
+          <label for="lattafa">Lattafa</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="nueve-pm"
+            value="nueve-pm"
+          />
+          <label for="nueve-pm">9pm</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="burberry"
+            value="burberry"
+          />
+          <label for="burberry">Burberry</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="el-ganso"
+            value="el-ganso"
+          />
+          <label for="el-ganso">El Ganso</label>
+        </div>
+      </section>
+
+      <!-- Sección de catálogo de productos-->
+      <section class="product-catalog">
+        <!-- Tarjetas de productos-->
+        <div class="product-item">
+          <a href="Detalle_Producto.html" target="_blank">
+            <img
+              src="../Multimedia/Img/Sauvage.png"
+              alt="Dior Sauvage"
+              width="200"
+              height="200"
+            />
+            <h2>Dior Sauvage</h2>
+          </a>
+          <p>Precio: ₡100,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Valentino.png"
+            alt="Valentino"
+            width="200"
+            height="200"
+          />
+          <h2>Valentino UOMO</h2>
+          <p>Precio: ₡30,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Club de nuit.png"
+            alt="Club de nuit"
+            width="200"
+            height="200"
+          />
+          <h2>Club de nuit</h2>
+          <p>Precio: ₡25,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/9pm black.png"
+            alt="9pm black"
+            width="200"
+            height="200"
+          />
+          <h2>9pm black</h2>
+          <p>Precio: ₡15,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Versace.png"
+            alt="Versace"
+            width="200"
+            height="200"
+          />
+          <h2>Versace Eros</h2>
+          <p>Precio: ₡20,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Khamrah.png"
+            alt="Khamrah Lattafa"
+            width="200"
+            height="200"
+          />
+          <h2>Khamban Lattafa</h2>
+          <p>Precio: ₡22,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Hawas.png"
+            alt="Hawas"
+            width="200"
+            height="200"
+          />
+          <h2>Hawas</h2>
+          <p>Precio: ₡15,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Odyssey.png"
+            alt="Odyssey"
+            width="200"
+            height="200"
+          />
+          <h2>Odyssey</h2>
+          <p>Precio: ₡30,000</p>
+        </div>
+      </section>
+
+      <!-- Bloque de Paginación -->
+      <div class="pagination-container">
+        <nav
+          id="paginacion"
+          class="paginacion"
+          aria-label="Paginación de productos"
+        >
+          <ul class="paginacion-lista">
+            <li>
+              <button
+                type="button"
+                id="btn-pagina-anterior"
+                aria-label="Página anterior"
+              >
+                &lt;
+              </button>
+            </li>
+
+            <li>
+              <button
+                type="button"
+                class="btn-pagina pagina-activa"
+                data-page="1"
+              >
+                1
+              </button>
+            </li>
+
+            <li>
+              <button type="button" class="btn-pagina" data-page="2">2</button>
+            </li>
+
+            <li>
+              <button type="button" class="btn-pagina" data-page="3">3</button>
+            </li>
+
+            <li>
+              <button
+                type="button"
+                id="btn-pagina-siguiente"
+                aria-label="Página siguiente"
+              >
+                &gt;
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </main>
+
+    <!--------------------------------------------------------->
+    <!-------------------PIE DE LA PÁGINA---------------------->
+    <!--------------------------------------------------------->
+    <footer>
+      <!-- Logo de la marca -->
+      <img class="logo" src="../Multimedia/Img/Logo_Celestial_Woods.png" alt="Logo Celestial & Woods">
+
+      <section class="footer-menu">
+        <h3> Menú Navegación</h3>
+        <ul class="nav-list-footer">
+                <li class="nav-item-footer"> <a href="../Index.html" class="nav-link-footer"> Inicio</a></li>
+                <li class="nav-item-footer"> <a href="#" class="nav-link-footer active">  Catálogo</a></li>
+                <li class="nav-item-footer"> <a href="../Paginas/Guia_fragancias.html" class="nav-link-footer">  Guía de Fragancias</a> </li>
+                <li class="nav-item-footer"> <a href="../Paginas/Preguntas.html" class="nav-link-footer">  Preguntas Frecuentes</a> </li>
+                <li class="nav-item-footer"> <a href="../Paginas/Informacion.html" class="nav-link-footer"> Quienes somos</a></li>
+                <li class="nav-item-footer"> <a href="../Paginas/Contacto.html" class="nav-link-footer"> Contacto</a> </li>
+        </ul>
+      </section>
+
+      <section class="footer-social">
+        
+        <h3>Síguenos</h3>
+
+        <nav aria-label="Redes sociales">
+          <a href="#" class="social-icon"> <i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"> <i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+        </nav>
+
+      </section>
+
+
+      <!-- Compra por WhatsApp -->
+      <section class="footer-whatsapp">
+
+        <i class="bi bi-whatsapp"></i>
+
+        <div class="left">
+          <h3>Compra por WhatsApp</h3>
+          <a href="#"> +506 6000 0000 </a>
+        </div>
+
+      </section>
+
+      <!-- Horarios -->
+      <section class="footer-hours">
+
+          <h3><i class="bi bi-clock"></i>  Horario de atención</h3>
+
+          <ul>
+              <li><i class="bi bi-calendar"></i><strong> Lunes a Viernes:</strong> 8:00 a.m. - 6:00 p.m.</li>
+              <li><i class="bi bi-calendar"></i><strong> Sábado:</strong> 8:00 a.m. - 6:00 p.m.</li>
+              <li><i class="bi bi-calendar"></i><strong> Domingo:</strong> Cerrado</li>
+          </ul>
+
+      </section>
+
+      <!-- Información legal -->
+      <section class="footer-legal">
+
+        <nav aria-label="Información legal">
+
+            <ul class="legal-list">
+
+                <li class="legal-item">
+                    <a href="#" class="legal-link">
+                        <span class="legal-left">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Términos y condiciones</span>
+                        </span>
+
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
+
+                <li class="legal-item">
+                    <a href="#" class="legal-link">
+                        <span class="legal-left">
+                            <i class="bi bi-lock"></i>
+                            <span>Políticas de privacidad</span>
+                        </span>
+
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+  </section>
+
+      <!-- Copyright -->
+      <section class="footer-copy">
+
+          <p>
+              &copy; 2026 Celestial & Woods. <br> Todos los derechos reservados.
+          </p>
+
+      </section>
+
+    </footer>
+
+      <script src="../Java/catalogo.js"></script>
+      <script src="../Java/main.js"></script>
+      <!--Se pone al final porque ocupa primero haber leido todo el html-->
+    </main>
+  </body>
+</html>

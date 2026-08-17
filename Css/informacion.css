@@ -1,0 +1,209 @@
+/*=================================================================================
+    ESTILOS BASE (PARA MOBILE Y DESKTOP)  Y CONFIGURACIÓN MOBILE 
+====================================================================================*/
+
+.Main-content {
+  padding: 2rem 0 3rem;
+}
+
+.About-Content {
+  /* Layout que agrupa el bloque de texto (`.About-Text`) y la imagen
+     (`.About-Image`). Mobile: columna; Desktop: fila (ver @media). */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.About-Image {
+  /* Contenedor visual para la imagen principal.
+     - `aspect-ratio` asegura proporción consistente.
+     - `overflow: auto` protege contra contenido inesperado. */
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  margin: 0;
+  border-radius: 1rem;
+  background-color: #2b2b2b;
+  overflow: auto;
+}
+
+.About-Image img {
+  /* Imagen responsiva dentro del contenedor: cubre y mantiene radios. */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+.main-title {
+  /* Título principal de la página. Tipografía serif destacada. */
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: #d4b483;
+}
+
+.main-description {
+  /* Texto introductorio / descripción. Uso de peso ligero para
+     contraste con el título; buen interlineado para lectura. */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+}
+
+.Main-content > hr {
+  /* Separador sutil con tono dorado translúcido. */
+  border: none;
+  border-top: 1px solid rgba(203, 161, 53, 0.35);
+  margin: 2rem 0;
+}
+
+.main-subtitle {
+  /* Subtítulo para secciones internas (ej. pilares). Centrado en
+     mobile, alineado a la izquierda en desktop. */
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #d4b483;
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.main-pillars {
+  /* Contenedor de las tarjetas tipo 'pilar'. Mobile: columna; desktop: fila. */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.pillar {
+  /* Tarjeta informativa: icono + título + descripción.
+     Se usa grid para alinear icono y contenido. */
+  background-color: #2b2b2b;
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "icon  title"
+    "desc  desc";
+  column-gap: 1rem;
+  row-gap: 0;
+  align-items: start;
+}
+
+.pillar-icon {
+  /* Icono del pilar: mantener tamaño fijo para consistencia visual. */
+  grid-area: icon;
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+}
+
+.pillar-title {
+  /* Título dentro de la tarjeta. Usa la familia serif para marcar jerarquía. */
+  grid-area: title;
+  align-self: center;
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.3;
+}
+
+.pillar-title hr {
+  /* Línea decorativa bajo el título (dorado). */
+  border: none;
+  border-top: 2px solid #cba135;
+  width: 2.5rem;
+  margin-top: 0.6rem;
+}
+
+.pillar-description {
+  /* Descripción secundaria del pilar: texto ligero y legible. */
+  grid-area: desc;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 950px) {
+  /* Ajustes para pantallas grandes: convertir layout a dos columnas
+     y ajustar tamaños/paddings para mayor jerarquía. */
+  .Main-content {
+    padding: 3rem 0 5rem;
+  }
+
+  .About-Content {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 3rem;
+  }
+
+  .About-Text {
+    flex: 0.9;
+  }
+
+  .About-Image {
+    flex: 1.1;
+  }
+
+  .main-title {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .main-description {
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .Main-content > hr {
+    margin: 2.5rem 0;
+  }
+
+  .main-subtitle {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .main-pillars {
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .pillar {
+    flex: 1;
+    padding: 2rem 1.75rem;
+    transition: transform 0.3s ease;
+  }
+
+  .pillar:hover {
+    transform: translateY(-6px);
+  }
+
+  .pillar-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .pillar-title {
+    font-size: 1.05rem;
+  }
+
+  .pillar-description {
+    font-size: 0.9rem;
+  }
+}
