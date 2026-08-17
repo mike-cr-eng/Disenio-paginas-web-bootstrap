@@ -1,0 +1,367 @@
+/* ========================================================================== 
+	CATÁLOGO DE PRODUCTOS - Estilos principales
+============================================================================= */
+
+/* Variables de colores para no ir cambiando color por color */
+:root {
+  --catalog-surface: rgba(18, 18, 18, 0.96);
+  --catalog-surface-soft: rgba(255, 255, 255, 0.03);
+  --catalog-border: #8b6d34;
+  --catalog-border-soft: rgba(139, 109, 52, 0.45);
+  --catalog-text: #f5f1e8;
+  --catalog-muted: #b6b0a5;
+  --catalog-accent: #d6b15f;
+}
+
+* {
+  color: inherit;
+}
+
+.breadcrumb {
+  display: none;
+}
+
+/* Contenedor principal centrado */
+.main-content {
+  width: min(1240px, calc(100% - 1.5rem));
+  margin: 0 auto;
+  padding: 0 0 1.5rem;
+}
+
+/* Estilo común para las cajas principales: bordecito dorado suave y fondo oscuro */
+.catalog-header,
+.filter-section,
+.product-catalog,
+.main-footer {
+  border: 1px solid var(--catalog-border-soft);
+  background: var(--catalog-surface);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+}
+
+/* Cabecera del catálogo */
+.catalog-header {
+  margin: 0 0 1rem;
+  padding: 1rem;
+}
+
+/* Flexbox para ordenar el título y el buscador en columna */
+.catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Título principal */
+.catalog h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 2.7vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.catalog label {
+  display: none;
+}
+
+/* Barra de búsqueda */
+.catalog input[type="text"] {
+  width: 100%;
+  height: 2.25rem;
+  border: 1px solid var(--catalog-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--catalog-text);
+  padding: 0 1rem;
+  font: inherit;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Color del texto de ejemplo en el buscador */
+.catalog input[type="text"]::placeholder {
+  color: var(--catalog-muted);
+}
+
+/* Efecto cuando haces clic en el buscador (focus) */
+.catalog input[type="text"]:focus {
+  border-color: var(--catalog-accent);
+  box-shadow: 0 0 0 2px rgba(214, 177, 95, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Botón de filtros para celular (tipo hamburguesa) */
+.filtro-hamburguesa {
+  display: none; /* En PC no se ve */
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 0 0 1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--catalog-border);
+  background: linear-gradient(
+    180deg,
+    rgba(139, 109, 52, 0.18),
+    rgba(0, 0, 0, 0.65)
+  );
+  color: var(--catalog-text);
+  font:
+    600 0.98rem "Montserrat",
+    sans-serif;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+/* Sección de filtros lateral */
+.filter-section {
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Título de la sección de filtros */
+.filter-section h2 {
+  margin-bottom: 0.9rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Usando Grid para alinear los checkboxes con sus textos */
+.filter-options {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-options .category,
+.filter-options strong,
+.filter-options label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+}
+
+/* El título ("Precio:", "Tipos:", "Marcas:") y el input de precio
+   ocupan las dos columnas completas, ya que no forman pareja
+   checkbox + texto */
+.filter-options label[for="price-range"],
+.filter-options .category,
+.filter-options input[type="number"] {
+  grid-column: 1 / -1;
+}
+
+.filter-options label {
+  display: inline;
+  margin: 0;
+  color: var(--catalog-text);
+  line-height: 1.2;
+}
+
+/* Personalizo un poquito el checkbox con el color acentuado */
+.filter-options input[type="checkbox"] {
+  accent-color: var(--catalog-accent);
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Cajita para filtrar por precio */
+.filtro-precio {
+  width: 100%;
+  max-width: 10rem;
+  border: 1px solid var(--catalog-border-soft);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.4rem 0.55rem;
+  font: inherit;
+}
+
+/* Cuadrícula para mostrar los productos (4 columnas en pantallas grandes) */
+.product-catalog {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.3rem 1rem;
+  padding: 1rem 0.9rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Cada producto individual */
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.3rem 0.2rem 0.4rem;
+  transition: transform 0.2s ease;
+}
+
+/* Efectito de flotar al pasar el mouse por encima del producto */
+.product-item:hover {
+  transform: translateY(-2px);
+}
+
+.product-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Imagen del producto con sombrita */
+.product-item img {
+  display: block;
+  width: 100%;
+  max-width: 12rem;
+  height: 12rem;
+  object-fit: contain;
+  margin: 0 auto 0.5rem;
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.5));
+}
+
+/* Nombre del producto */
+.product-item h2 {
+  margin: 0 0 0.15rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Precio del producto */
+.product-item p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  color: var(--catalog-text);
+}
+
+/* Contenedor de la paginación abajo */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 1rem 0.95rem;
+  margin: 0 auto 1rem;
+}
+
+/* Lista de botones de páginas */
+.paginacion-lista {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Botones de número de página */
+.paginacion-lista button {
+  min-width: 2rem;
+  min-height: 2rem;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--catalog-text);
+  font:
+    500 0.95rem "Montserrat",
+    sans-serif;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.paginacion-lista button:hover {
+  border-color: var(--catalog-border);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Botón de la página en la que estás actualmente */
+.paginacion-lista .pagina-activa {
+  border-color: var(--catalog-border);
+  background: rgba(139, 109, 52, 0.18);
+  color: var(--catalog-accent);
+}
+
+/* Pie de página */
+.main-footer {
+  padding: 1rem;
+  text-align: center;
+  background: #333;
+}
+
+.footer-text {
+  color: #ded8cf;
+  font:
+    0.9rem "Montserrat",
+    sans-serif;
+  line-height: 1.5;
+}
+
+/* ========================================================================== 
+	 MEDIA QUERIES (Diseño responsivo para celulares y tablets)
+============================================================================= */
+
+/* Pantallas medianas en adelante (tablets y PC) */
+@media screen and (min-width: 768px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: 13.5rem minmax(0, 1fr);
+    column-gap: 1rem;
+  }
+
+  .catalog-header,
+  .filtro-hamburguesa,
+  .pagination-container,
+  .main-footer {
+    grid-column: 1 / -1;
+  }
+
+  .product-catalog {
+    min-height: 100%;
+  }
+}
+
+/* Pantallas pequeñas (celulares menores a 768px) */
+@media screen and (max-width: 767px) {
+  .main-content {
+    width: min(1180px, calc(100% - 1rem));
+  }
+
+  /* Muestro el botón de filtros hamburguesa en celu */
+  .filtro-hamburguesa {
+    display: flex;
+  }
+
+  /* Oculto los filtros por defecto hasta que toquen el botón */
+  .filter-section {
+    display: none;
+  }
+
+  .filter-section.visible {
+    display: block;
+  }
+
+  /* Bajo a 2 columnas de productos para que se vean bien */
+  .product-catalog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0.75rem;
+  }
+
+  .product-item img {
+    max-width: 13rem;
+    height: 13em;
+  }
+}
+
+/* Pantallas muy pequeñas (celulares más angostos, menor a 480px) */
+@media screen and (max-width: 480px) {
+  .product-catalog {
+    grid-template-columns: 1fr; /* Una sola columna de productos */
+  }
+
+  .catalog h1 {
+    font-size: 1.85rem;
+  }
+}

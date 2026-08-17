@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,11 +9,11 @@
     />
     <meta
       name="description"
-      content="Descubre perfumes exclusivos para mujer, hombre y unisex. Encuentra la fragancia perfecta en Celestial & Woods."
+      content="Conoce todos los detalles de tu perfume favorito en Celestial & Woods. Descubre sus notas olfativas, familia aromática, concentración, duración y recomendaciones para elegir la fragancia ideal."
     />
     <meta
       name="keywords"
-      content="perfumes, fragancias, perfumes originales, perfumes para mujer, perfumes para hombre, tienda de perfumes"
+      content="detalle de perfume, perfume, fragancia, notas olfativas, familia olfativa, duración del perfume, concentración, perfume para hombre, perfume para mujer, perfume unisex, Celestial & Woods"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -21,16 +21,18 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="Css/Index.css" />
-
-    <title>Inicio | Celestial & Woods</title>
-    <link href="Css/Styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../Css/Styles.css" />
+    <link rel="stylesheet" href="../Css/DetalleProducto.css" />
+    <title>Detalle Producto | Celestial & Woods</title>
+    <link href="../Css/Styles.css" rel="stylesheet" />
+    
     <!--Se pone de último para que tenga prioridad-->
     <!--Para usar bootstrap (iconos)-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+    
 
     <!-- Font Awesome -->
     <link
@@ -38,7 +40,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
   </head>
-
   <body>
     <!--------------------------------------------------------->
     <!------------------------MENU----------------------------->
@@ -47,9 +48,9 @@
     <header class="main-header">
       <!-- Logo de la marca, centrado -->
       <div class="header-logo">
-        <a href="Index.html">
+        <a href="../Index.html">
           <img
-            src="Multimedia/Img/Logo_Celestial_Woods.png"
+            src="../Multimedia/Img/Logo_Celestial_Woods.png"
             alt="Logo Celestial & Woods"
           />
         </a>
@@ -64,32 +65,32 @@
 
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="#" class="nav-link active"
+            <a href="../Index.html" class="nav-link"
               ><i class="bi bi-house-door"></i> Inicio</a
             >
           </li>
           <li class="nav-item">
-            <a href="Paginas/Catalogo_Productos.html" class="nav-link">
+            <a href="../Paginas/Catalogo_Productos.html" class="nav-link">
               <i class="fa-solid fa-spray-can-sparkles"></i> Catálogo</a
             >
           </li>
           <li class="nav-item">
-            <a href="Paginas/Guia_fragancias.html" class="nav-link">
+            <a href="../Paginas/Guia_fragancias.html" class="nav-link">
               <i class="fa-solid fa-leaf"></i> Guía de Fragancias</a
             >
           </li>
           <li class="nav-item">
-            <a href="Paginas/Preguntas.html" class="nav-link">
+            <a href="../Paginas/Preguntas.html" class="nav-link">
               <i class="bi bi-question-circle"></i> Preguntas Frecuentes</a
             >
           </li>
           <li class="nav-item">
-            <a href="Paginas/Informacion.html" class="nav-link"
+            <a href="../Paginas/Informacion.html" class="nav-link"
               ><i class="bi bi-person"></i> Quienes somos</a
             >
           </li>
           <li class="nav-item">
-            <a href="Paginas/Contacto.html" class="nav-link"
+            <a href="../Paginas/Contacto.html" class="nav-link"
               ><i class="bi bi-envelope"></i> Contacto</a
             >
           </li>
@@ -97,97 +98,106 @@
       </nav>
     </header>
 
-    <!-- Contenido principal (Main)-->
-    <main>
-      <section class="principal-products">
-        <!-- Sección de productos principales-->
-        <h2>Productos Principales</h2>
+    <main class="main-content">
+      <!-- Ruta de navegación (breadcrumb) -->
+      <nav class="breadcrumb">
+        <a href="../Index.html" class="breadcrumb-link">Inicio</a>
+        <span class="breadcrumb-separator">&gt;</span>
+        <a href="Catalogo_Productos.html" class="breadcrumb-link">Catalogo</a>
+        <span class="breadcrumb-separator">&gt;</span>
+        <span class="breadcrumb-current">Sauvage</span>
+      </nav>
 
-        <div class="product-container">
-          <!-- Tarjeta de producto-->
-          <article class="product-item">
-            <img
-              src="Multimedia/Img/Valentino.png"
-              alt="Valentino"
-              width="300"
-              height="300"
-            />
-            <h3>Valentino UOMO</h3>
-          </article>
-
-          <article class="product-item">
-            <img
-              src="Multimedia/Img/Khamrah.png"
-              alt="Khamban"
-              width="300"
-              height="300"
-            />
-            <h3>Khamban</h3>
-          </article>
-
-          <article class="product-item">
-            <img
-              src="Multimedia/Img/9pm black.png"
-              alt="9pm black"
-              width="300"
-              height="300"
-            />
-            <h3>9pm black</h3>
-          </article>
-        </div>
+      <!-- Buscador que redirige al catálogo -->
+      <section class="search-section">
+        <h3>Catalogo de productos</h3>
+        <form class="search-form" action="Catalogo_Productos.html" method="get">
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Buscar productos..."
+            maxlength="100"
+          />
+          <button type="submit" class="search-button">Buscar</button>
+        </form>
       </section>
 
-      <section class="Featured Products">
-        <!-- Sección de productos destacados-->
-        <h2>Productos Destacados</h2>
-
-        <div class="product-container">
-          <!-- Tarjeta de productos con precio-->
-          <article class="product-item">
-            <img
-              src="Multimedia/Img/Hawas.png"
-              alt="Hawas"
-              width="300"
-              height="300"
-            />
-            <h3>Hawas</h3>
-            <p>Precio: ₡15,000</p>
-          </article>
-
-          <article class="product-item">
-            <img
-              src="Multimedia/Img/Odyssey.png"
-              alt="Odyssey"
-              width="300"
-              height="300"
-            />
-            <h3>Odyssey</h3>
-            <p>Precio: ₡30,000</p>
-          </article>
-
-          <article class="product-item">
-            <img
-              src="Multimedia/Img/Club de nuit.png"
-              alt="Club de Nuit"
-              width="300"
-              height="300"
-            />
-            <h3>Club de Nuit</h3>
-            <p>Precio: ₡35,000</p>
-          </article>
+      <!-- Sección principal con la información del producto -->
+      <section class="product-detail">
+        <!-- Miniaturas  -->
+        <aside class="product-gallery">
+          <img
+            src="../Multimedia/Img/Sauvage 2.jpg"
+            alt="Miniatura 1 del producto"
+            width="100"
+            height="100"
+            class="gallery-thumbnail"
+          />
+          <img
+            src="../Multimedia/Img/Sauvage 3.png"
+            alt="Miniatura 2 del producto"
+            width="100"
+            height="100"
+            class="gallery-thumbnail"
+          />
+        </aside>
+        <!-- Imagen principal del producto -->
+        <div class="product-main-image">
+          <img
+            src="../Multimedia/Img/Sauvage.png"
+            alt="Imagen principal del producto"
+            width="300"
+            height="400"
+          />
         </div>
+        <!-- Nombre, precio, descripción de uso y contacto por WhatsApp -->
+        <aside class="product-info">
+          <h1 class="product-name">
+            Sauvage Eau de Toilette, de Christian Dior
+          </h1>
+          <p class="product-price">₡100.000 I.V.A.I</p>
+          <p class="product-description">
+            Perfil de uso: Pensada para hombres libres, modernos y decididos, es
+            ideal para uso diario durante todo el año, con buena duración y una
+            estela reconocible. Es uno de los perfumes masculinos más vendidos
+            del mundo, aunque genera opiniones divididas: para muchos es un
+            clásico "todo terreno", mientras que otros lo consideran demasiado
+            simple frente a otras creaciones de Dior.
+          </p>
+          <div class="whatsapp-contact">
+            <img
+              src="../Multimedia/Img/Whatsapp Icon.png"
+              alt="Logo de WhatsApp"
+              width="30"
+              height="30"
+            />
+            <p>
+              Para mas información: <br />
+              +506 6039 1808
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Descripción del producto -->
+      <section class="product-description">
+        <p>
+          La fuerte ráfaga cítrica de Sauvage Eau de Toilette está potentemente
+          anclada por la nobleza ambarina del ambroxán, el elemí resinoso y las
+          maderas. La fragancia se presenta como radicalmente fresca, cruda y
+          noble a la vez, con una composición donde predominan ingredientes
+          naturales cuidadosamente seleccionados.
+        </p>
       </section>
     </main>
 
-    <!--------------------------------------------------------->
-    <!-------------------PIE DE LA PÁGINA---------------------->
-    <!--------------------------------------------------------->
-
+    <!-- Pie de página -->
     <footer>
       <!-- Logo de la marca -->
       <img
         class="logo"
-        src="Multimedia/Img/Logo_Celestial_Woods.png"
+        src="../Multimedia/Img/Logo_Celestial_Woods.png"
         alt="Logo Celestial & Woods"
       />
 
@@ -195,30 +205,30 @@
         <h3>Menú Navegación</h3>
         <ul class="nav-list-footer">
           <li class="nav-item-footer">
-            <a href="#" class="nav-link-footer active"> Inicio</a>
+            <a href="../Index.html" class="nav-link-footer"> Inicio</a>
           </li>
           <li class="nav-item-footer">
-            <a href="Paginas/Catalogo_Productos.html" class="nav-link-footer">
+            <a href="../Paginas/Catalogo_Productos.html" class="nav-link-footer">
               Catálogo</a
             >
           </li>
           <li class="nav-item-footer">
-            <a href="Paginas/Guia_fragancias.html" class="nav-link-footer">
+            <a href="../Paginas/Guia_fragancias.html" class="nav-link-footer">
               Guía de Fragancias</a
             >
           </li>
           <li class="nav-item-footer">
-            <a href="Paginas/Preguntas.html" class="nav-link-footer">
+            <a href="../Paginas/Preguntas.html" class="nav-link-footer">
               Preguntas Frecuentes</a
             >
           </li>
           <li class="nav-item-footer">
-            <a href="Paginas/Informacion.html" class="nav-link-footer">
+            <a href="../Paginas/Informacion.html" class="nav-link-footer">
               Quienes somos</a
             >
           </li>
           <li class="nav-item-footer">
-            <a href="Paginas/Contacto.html" class="nav-link-footer">
+            <a href="../Paginas/Contacto.html" class="nav-link-footer">
               Contacto</a
             >
           </li>
@@ -301,8 +311,7 @@
         </p>
       </section>
     </footer>
-
-    <script src="Java/main.js"></script>
+    <script src="../Java/main.js"></script>
     <!--Se pone al final porque ocupa primero haber leido todo el html-->
   </body>
 </html>
