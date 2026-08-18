@@ -45,58 +45,38 @@
     <!------------------------MENU----------------------------->
     <!--------------------------------------------------------->
 
-    <header class="main-header">
-      <!-- Logo de la marca, centrado -->
-      <div class="header-logo">
-        <a href="../Index.html">
-          <img
-            src="../Multimedia/Img/Logo_Celestial_Woods.png"
-            alt="Logo Celestial & Woods"
-          />
-        </a>
-      </div>
+    <section id="barra-navegacion" class="container-fluid p-0">
+        
+      <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            
+          <div class="container-fluid px-4">
 
-      <button class="hamburger-menu" id="abrir">
-        <i class="bi bi-list"></i>
-      </button>
+              <!--Logo-->
+                <a class="navbar-brand fw-bold" href="#">
+                  <img src="Multimedia/Img/Logo_Celestial_Woods.png"
+                  alt="Logo Celestial & Woods" class="img-fluid"
+                    style="max-height: 10rem;"/>
+                </a>
+              
+                <!--Botón hamburguesa-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-      <nav class="header-nav" id="nav">
-        <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
-
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="../Index.html" class="nav-link"
-              ><i class="bi bi-house-door"></i> Inicio</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="../Paginas/Catalogo_Productos.html" class="nav-link">
-              <i class="fa-solid fa-spray-can-sparkles"></i> Catálogo</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="../Paginas/Guia_fragancias.html" class="nav-link">
-              <i class="fa-solid fa-leaf"></i> Guía de Fragancias</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="../Paginas/Preguntas.html" class="nav-link">
-              <i class="bi bi-question-circle"></i> Preguntas Frecuentes</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="../Paginas/Informacion.html" class="nav-link"
-              ><i class="bi bi-person"></i> Quienes somos</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="../Paginas/Contacto.html" class="nav-link"
-              ><i class="bi bi-envelope"></i> Contacto</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+                <!--links-->
+                <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-2">
+                        <li class="nav-item"><a href="index.html" class="nav-link fs-5"><i class="bi bi-house-door me-1 fw-bold"></i> Inicio</a></li>
+                        <li class="nav-item"><a href="Paginas/Catalogo_Productos.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="fa-solid fa-spray-can-sparkles me-1 "></i> Catálogo</a></li>
+                        <li class="nav-item"><a href="Paginas/Guia_fragancias.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="fa-solid fa-leaf me-1"></i> Guía de Fragancias</a></li>
+                        <li class="nav-item"><a href="Paginas/Preguntas.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-question-circle me-1"></i> Preguntas Frecuentes</a></li>
+                        <li class="nav-item"><a href="Paginas/Informacion.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-person me-1"></i> Quienes somos</a></li>
+                        <li class="nav-item"><a href="Paginas/Contacto.html" class="nav-link fs-5 text-nowra fw-bold"><i class="bi bi-envelope me-1"></i> Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
 
     <main class="main-content">
       <!-- Ruta de navegación (breadcrumb) -->
