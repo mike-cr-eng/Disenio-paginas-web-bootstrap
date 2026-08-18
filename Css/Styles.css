@@ -1,78 +1,11 @@
 
-/* ==========================================================================
-    CONFIGURACIÓN  GENERAL 
-============================================================================= */
-
-/*Esto es para que aplique todo los formatos a todo el documento*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Hace que el ancho y el alto del elemento incluyan el padding y el borde, evitando que aumente su tamaño total. */
-  color: white;
-}
-
-/*Esto es para que aplique esa función a todo el html*/
-html {
-  scroll-behavior: smooth; /* Desplaza la página de forma suave hacia una sección en lugar de saltar directamente. */
-}
-
-main {
-  width: 80%;
-  margin: 0 auto;
-  
-}
-
-body{
-  background-color: black;
-}
-
-
-
 /* =================================================================================
     ESTILOS BASE (PARA MOBILE Y DESKTOP)  Y CONFIGURACIÓN MOBILE 
 ==================================================================================== */
   
 /*-------------------------------------------------------------------*/
-/*------------CONFIGURACIÓN DE LA SECCIÓN GUIA DE FRAGANCIAS---------*/
+/*------------CONFIGURACIÓN DEL NAV---------*/
 /*-------------------------------------------------------------------*/
-
-
-  /*logo en mobile*/
-  .header-logo img {
-    width: 130px;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  /*Esto es para que muestre el menu hamburguesa cuando está en mobile*/
-  .hamburger-menu { 
-    display: block;
-    background-color: transparent;
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-  }
-
-  .hamburger-menu:hover{
-    transform: scale(1.15); /*cuando se presiona se hace más grande*/
-  }
-
-  /*Botón de cerrar X*/
-  .cerrar-menu{
-    background-color: transparent;
-    margin: 0;
-    border: 0;
-    font-size: 2rem;
-    align-self: flex-end;
-    cursor: pointer;
-    display: block;  /*Esto es para que muestre el menu hamburguesa cuando está en mobile*/
-    transition: transform 0.3s ease;
-  }
-
-  .cerrar-menu:hover{
-    color:white;
-  }
 
   /*Configuración general de los íconos*/
   .bi-house-door, .fa-solid, .bi-question-circle, .bi-person, .bi-envelope {
@@ -80,94 +13,9 @@ body{
     font-size: 1.2rem;
   }
 
-  /*El contenedor (header) */
-  .main-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem; /* 1rem arriba/abajo y 1.5rem de "aire" a los lados */
-    width: 100%;
-    box-sizing: border-box; /* Evita que el padding genere scroll horizontal */
-  }
-
-  /*Contenedor(nav) Padre del botton y el ul*
-  Es el menú desplegable lateral en Mobile*/
-  .header-nav {
-    position: fixed; /*Aquí esta actuando como hijo del header y significa mover el hijo en cualquier parte dentro del padre. Permite usar left, top..*/
-    top: 0;
-    right: 0;
-    bottom: 0;
-
-    width: 240px;
-    height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 1rem;
-  
-    background: linear-gradient(
-    180deg,
-    #3c3b3a 0%,
-    #2f2f2f 45%,
-    #232323 100%
-    );
-
-    box-shadow:
-    -15px 0 40px rgba(0,0,0,.45),
-    0 0 0 100vmax rgba(0,0,0,.5);
-
-    border-radius: 40px 0 0 40px;
-
-    /* Esto es para que no muestre el nav cuando está en mobile y pongo .nav-list para que si me muestre la imagen que también esta adentro del nav*/
-    opacity: 0;
-    visibility: hidden; /* Oculto por defecto en móvil ya que solo se va a mostrar presionando el botón hamburguesa */
-    transform: translateX(100%);
-    transition: transform .35s ease;
-    z-index: 10; /*Esto es para las imagenes del fondo que no se vean encima del menu*/
-  }
-
-  /*Esto es una clase de JavaScript para desplegar menú en mobile*/
-  .header-nav.visible {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-  }
-
-/*Contenedor (ul) Padre de los li*/
-/*Es la lista del menú en mobile*/
-  .nav-list {
-    display: flex;
-    flex-direction: column; /*que ponga a sus hijos de manera vertical*/ 
-    margin: 0;   /* Espacio debajo de la X */
-    padding: 0;
-    width: 100%; /*significa que el elemento ocupa el 100% del ancho de su contenedor padre.*/
-    list-style: none;
-  }
-
-/*Contenedor (li) Padre de los a*/
-/*Son los elementos de la lista*/
-  .nav-item{
-    margin: 0;
-    width:100%;
-    padding:1rem 0;
-    
-  }
-
-  /*Esta es la líneas del menu gris y le pongo el not para que al ultimo no le ponga*/
-  .nav-item:not(:last-child){
-    border-bottom:1px solid rgba(203,161,53,.45);
-  }
-
   /*Contenedor (a) para manejar lo que está dentro el texto. Padre de los textos*/
   .nav-link {
-    color: #d4b483;
-    text-decoration: none; /*Para quitarle los puntos y raya*/
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.8rem 0;
-    white-space: nowrap; /*le dice al navegador que nunca haga un salto de línea dentro del texto.*/
+    color: #d4b483 !important;
     transition: .3s;
     font-family: "Cormorant Garamond", sans-serif;
 
@@ -185,90 +33,15 @@ body{
   }
 
   
-
   /*-------------------------------------------------------------------*/
   /*--------------------------CONFIGURACIÓN FOOTER---------------------*/
   /*-------------------------------------------------------------------*/
 
-  footer {
-    width: 100%; /*Ocupa el 100% del ancho de la pantalla*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1rem;
-    padding-bottom:0;
-    margin-bottom: 0;
-    border-top: 1px solid #87868477;
-    
-  }
-
-  /*logo*/
-  .logo {
-    width: 100px; /*Se usa px para que mantenga siempre esa medida sin importar el tamaño de la pantalla*/
-    height: 100px;
-  }
-
-  /*Estilo general para todas las section del footer*/
-
-  footer section {
-    border-color: transparent;
-    background-color: black;
-    padding: 1rem;
-    margin: 0.5rem;
-    width: 100%;  /*Esto hace que siempre el hijo ocupe el 100% del ancho de su elemento padre que es el footer y a su vez footer tambien tiene width 100%*/
-    /*por eso los elementos siempre van a quedar centrados si pongo justife content center aunque alarge la pantalla*/
-  }
-
   footer li {
     font-family: "Montserrat",sans-serif;
-    font-size: 0.70rem;
-    font-weight: 400;
-    white-space: nowrap; /*le dice al navegador que nunca haga un salto de línea dentro del texto.*/
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  footer h3 {
-    font-size: 0.90rem;
-    font-weight: 400;
-    border-left:solid #cba135;
-    padding-left: 0.90rem;
-    padding-bottom: 0.3rem;
   }
 
   
-  /*--------Todo sobre la sección de footer-menu--------*/
-  
-
-  /*Contenedor (ul) Padre de los li*/
-  .nav-list-footer {
-    display: flex;
-    flex-direction: column; /*que ponga a sus hijos de manera vertical*/ 
-    margin: 0;   /* Espacio debajo de la X */
-    padding: 0;
-    width: 100%; /*significa que el elemento ocupa el 100% del ancho de su contenedor padre.*/
-  }
-
-  /*Contenedor (li) Padre de los a*/
-  .nav-item-footer{
-    margin: 0;
-    width:100%;
-    padding: 0.4rem 0;
-    
-  }
-
-  /*Esta es la líneas del menu gris y le pongo el not para que al ultimo no le ponga*/
-  .nav-item-footer:not(:last-child){
-    border-bottom:1px solid rgba(215, 157, 12, 0.199);
-  }
-
-  /*Contenedor (a) para manejar lo que está dentro el texto. Padre de los textos*/
-  .nav-link-footer {
-    color: white;
-    text-decoration: none; /*Para quitarle los puntos y raya*/
-  }
 
   .nav-link-footer:hover {
   /*Cuando se pasa el mouse por los link del nav*/
@@ -276,40 +49,10 @@ body{
     color: #f6deb0;
   }
 
-
-  /*--------Todo sobre la sección de footer-social--------*/
-  
-  
-  .footer-social {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /*Contenedor (nav) padre de los a*/
-  .footer-social nav{
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    justify-content: center;
-  }
-
-  /*Este el contenedor(a) padre de los i los textos*/
-  /*Al final es el círculo de las redes*/
   .social-icon{
-      width: 2.5rem;
-      height:2.5rem;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid #cba135;
+      border: 2px solid #cba135;
       border-radius: 50%;
-      text-decoration: none;
-      transition: .3s;
-  }
-
-  .social-icon i{
-      font-size: 1rem;
   }
 
   /*Esto es para cuando se toquen con el mouse se hagan un poquito para arriba*/
@@ -318,112 +61,23 @@ body{
   }
 
   footer .bi{
-    background-color: black;
+  
     color: #cba135;
-    padding: 0.2rem;
-    margin: 0;
 
   }
 
-  /*--------Todo sobre la sección de footer-whatsapp----*/
-  
-
-  .footer-whatsapp {
-    display: flex;
+   .footer-whatsapp {
+   
     border: solid 1px #cba135;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
     border-radius: 10px;
     
-  }
-
-  .footer-whatsapp i {
-    font-size: 2rem;
-    margin-right: 1rem;
-  }
-
-  .footer-whatsapp div {
-    margin-left: 0%;
-    border-left: solid 2px #cba135;;
-  }
-
-  .footer-whatsapp h3, .footer-whatsapp a{
-
-    border-left: none;
-    padding-left: 1rem;
-    text-decoration: none;
-
   }
 
   .footer-whatsapp a:hover {
     color: #cba135;
   }
-  
 
-  /*--------Todo sobre la sección de footer-hour--------*/
-
-
-  .footer-hours li {
-    padding-top: 0.7rem;
-    padding-left: 1.15rem;
-
-  }
-  
-
-  /*--------Todo sobre la sección de footer-legal--------*/
-
-  .footer-legal{
-    width: 90%;
-    padding-top: 0;
-    margin-bottom: 2rem;
-    
-  }
-
-  .legal-list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-.legal-item{
-    border-bottom: 1px solid rgba(255, 255, 255, 0.252);
-  }
-
-.legal-link{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 1rem 0;
-
-    text-decoration: none;
-    color: white;
-
-    transition: .3s;
-  }
-
-.legal-left{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-.legal-left i, .legal-link i{
-    color: #cba135;
-    font-size: 1.2rem;
-  }
-
-.legal-left span{
-    font-size: 0.9rem;
-    font-family: "Cormorant Garamond", sans-serif;
-  }
-
-.footer-legal i{
-    font-size: 0.9rem;
-  }
-
-.legal-link:hover{
+  .legal-link:hover{
     color: #cba135;
   }
 
@@ -435,20 +89,7 @@ body{
     transition: transform .3s ease;
   }
 
-  /*--------Todo sobre la sección de copyright----------*/
-
-
-  .footer-copy{
-    width: 100%;
-    background-color: #333;
-    border-radius: 0%;
-    text-align: center;
-    font-size: 0.90rem;
-    margin: 0;
-    padding: 2rem;
-    
-  }
-
+  
 /* ==========================================================================
     CONFIGURACIÓN ESCRITORIO (A partir de 950px)
 ============================================================================= */
@@ -459,92 +100,6 @@ body{
   /*--------------------------CONFIGURACIÓN MENÚ-----------------------*/
   /*-------------------------------------------------------------------*/
 
-  /* Ocultamos los botones de control móvil */
-  .hamburger-menu, .cerrar-menu {
-    display: none;
-  }
-
-  /*El logo que es más grande para escritorio*/
-  .header-logo img {
-    width: 10.5rem;
-    height: 10.5rem;
-  }
-
-  /*El contenedor (header) */
-  .main-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Mantiene logo a la izq y nav a la der */
-    max-width: 1300px;              /* Límite para que no se desparrame en pantallas gigantes */
-    margin: 0 auto !important;     /* Centra todo el header en la pantalla */
-    padding: 1.5rem 3rem !important;/* Da buen espacio/padding a los lados */
-  }
-
-  /*Configuración general de los íconos*/
-  .bi-house-door, .fa-solid, .bi-question-circle, .bi-person, .bi-envelope {
-    color: white;
-    font-size: 1.2rem;
-  }
-
-
-  /*El el contenedor (nav)*/
-  /*Se resetea: pasa de ser un menú desplegable a una barra horizontal fija*/
-
-  .header-nav {
-    position: static;
-    width: 100%;
-    height: auto;
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0;
-
-    display: flex; /*Para poner todos los hijos al lado*/
-    align-items: center;
-    justify-content: center;
-    gap: 2.25rem; /*es el espacio en blanco que se deja entre elementos */
-    padding: 1.625rem 3.125rem;
-
-    /* Visibilidad permanente */
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-  }
-
-  /*Es el contenedor (ul)*/
-  /*La lista pasa de vertical a horizontal*/
-  .nav-list {
-    flex-direction: row;
-    gap: 0.2rem;
-    align-items: center;
-  }
-
-  /* Quitamos las líneas divisorias de mobile y ajustamos el padding */
-  .nav-item {
-    width: auto;
-    padding: 0;
-  }
-
-  .nav-item:not(:last-child) {
-    border-bottom: none;
-  }
-
-  /*Es el contenedor (a) para manejar el texto dentro de los */
-  /*Estilo de los botones en escritorio*/
-  .nav-link {
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 600;
-    padding: 0.5rem 0.5rem;
-    border-radius: 1.25rem;
-    transition: background 0.25s ease, color 0.25s ease;
-    /* transition: background 0.25s ease, color 0.25s ease;
-      Hace que los cambios de "background" y "color" no ocurran de golpe,
-      sino de forma suave, en 0.25 segundos cada uno (como un desvanecido).
-      Aquí van DOS transiciones separadas por una coma: una para el background
-      y otra para el color, cada una con su propia duración y tipo de movimiento. */
-    text-align: center;
-  }
-
   /*Cuando se pasa el mouse por los link del nav*/
   .nav-link:hover {
     background: linear-gradient(
@@ -553,7 +108,8 @@ body{
           #cba135,
           #f2d27a
       );
-    color: black;
+    color: black !important;
+    border-radius: 30px;
   }
 
   .nav-link:hover i{ /*cuando pasen el mouse por ahi tambien cambie de color los iconos*/
@@ -564,143 +120,5 @@ body{
   /*-------------------------CONFIGURACIÓN FOOTER----------------------*/
   /*-------------------------------------------------------------------*/
 
- /*CONFIGURACIÓN DEL GRID EN EL FOOTER */
-  footer {
-    display: grid; /*Activa el "modo cuadrícula" para todos los hijos directos del footer.*/
-    grid-template-columns: 200px 1fr 1fr 1fr; 
-    /*200px es el espacio para la imagen.
-      La 2ª, 3ª y 4ª columna miden 2fr cada una. .*/
-    column-gap: 2.5rem;
-    row-gap: 1.5rem;
-    
-    align-items: start;
-    width: 100%;
-
-  /* Ancho controlado y centrado */
-    max-width: 1200px;
-    margin: 0 auto !important;
-    padding: 3rem 2rem 0 2rem;
-    box-sizing: border-box;
-
-    /* 1. Quitamos el borde normal de móvil */
-    border-top: none; /*Se quita porque sino queda cortada y no llega a todo el ancho de la pantalla porque el footer no es tan ancho*/
-    position: relative; /* Necesario para posicionar la línea */
-      
   }
 
-  /* 2. Creamos la línea superior de pantalla a pantalla */
-  footer::before { /*Crea una "línea fantasma" en la parte superior del footer (antes del footer).*/
-    content: ""; /* 1. Crea una caja invisible */
-    position: absolute; /*déjame moverla libremente a donde yo quiera usando coordenadas".*/
-    top: 0; /*Pégate exactamente al borde superior*/
-    left: 50%; /*Le dice que deje un espacio a lado de la izquierda del 50% entonces se va totalmente a la derecha pero como es el tamaño de toda la pantalla 
-    va sobrar un monto de espacio a la derecha */
-    
-    transform: translateX(-50%); /*Arrastra el borde 50% a la izquierda por el eje x permitiendo que quede el borde centrado
-    y por todo el ancho del navegador*/
-    
-    /* Le damos el ancho de toda la pantalla */
-    width: 100vw; 
-    
-    /*color y grosor del borde */
-    border-top: 2px solid #87868477; 
-  }
-
-  footer section {
-    margin: 0;
-    padding: 0;
-    
-  }
-
-  /*POSICIONAMIENTO DE CADA HIJO DEL FOOTER (SECTION) */
-
-  /* Columna 1: Logo */
-  .logo {
-    grid-column: 1; /*En qué columna se coloca el elemento.*/
-    grid-row: 1 span 2; /* Abarca 2 filas para centrarse con el resto */
-    justify-self: center;
-    width: 160px;
-    height: 160px;
-  }
-
-  /* Columna 2: Menú Navegación */
-  .footer-menu {
-    grid-column: 2;
-    grid-row: 1 / span 2; /*Span significa toma dos filas abajo*/
-  }
-
-  /* Columna 3, Fila 1: Síguenos */
-  .footer-social {
-    grid-column: 3;
-    grid-row: 1;
-    /* display: flex; estoy haciendo esa celda donde esta lo de siguenos flexible */
-  }
-
-  .footer-social nav {
-    justify-content: center; /* Alinea los íconos al centro */
-    gap: 1rem;
-    margin-top: 0.5rem;
-  }
-
-  /* Columna 3, Fila 2: WhatsApp (Debajo de Síguenos) */
-  .footer-whatsapp {
-    grid-column: 3;
-    grid-row: 2;
-    margin-top: 0;
-    box-sizing: border-box;
-    justify-self: center;
-    margin-top: -4rem;
-    padding: 1rem;
-  }
-
-  /* Columna 4: Horarios */
-  .footer-hours {
-    grid-column: 4;
-    grid-row: 1 / span 2;
-  }
-
-  /* Fila 3: Legales (Términos y Políticas en horizontal) */
-  .footer-legal {
-    grid-column: 4;/* Ocupa de la columna 1 a la última */
-    grid-row: 2;
-    margin-top: -3rem !important;
-    justify-self: center;
-  }
-
-  .legal-list {
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  /* Fila 4: Copyright */
-  footer section.footer-copy {
-    grid-column: 1 / -1;
-    grid-row: 4;
-    margin-top: -1rem;
-    padding: 1.5rem 0;
-    
-    /* 1. Ocupa el 100% de la pantalla */
-    width: 100vw !important; 
-  
-    /* 2. Truco para romper el padding del footer y llegar al borde de la pantalla */
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-  }
-
-  .footer-copy p {
-    margin: 0;
-    font-size: 1.2rem;
-
-  }
-
-  /* Ocultamos/desactivamos la etiqueta <br> dentro del footer en escritorio */
-  .footer-copy br {
-    display: none;
-    
-  }
-
-}
