@@ -69,12 +69,12 @@
                 <!--links-->
                 <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
                     <ul class="navbar-nav align-items-lg-center gap-lg-2">
-                        <li class="nav-item"><a href="../index.html" class="nav-link fs-5"><i class="bi bi-house-door me-1 fw-bold"></i> Inicio</a></li>
+                        <li class="nav-item"><a href="../index.html" class="nav-link fs-5 text-nowrap"><i class="bi bi-house-door me-1 fw-bold"></i> Inicio</a></li>
                         <li class="nav-item"><a href="../Paginas/Catalogo_Productos.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="fa-solid fa-spray-can-sparkles me-1 "></i> Catálogo</a></li>
                         <li class="nav-item"><a href="../Paginas/Guia_fragancias.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="fa-solid fa-leaf me-1"></i> Guía de Fragancias</a></li>
                         <li class="nav-item"><a href="../Paginas/Preguntas.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-question-circle me-1"></i> Preguntas Frecuentes</a></li>
                         <li class="nav-item"><a href="../Paginas/Informacion.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-person me-1"></i> Quienes somos</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link active fs-5 text-nowra fw-bold"><i class="bi bi-envelope me-1"></i> Contacto</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link active fs-5 text-nowrap fw-bold"><i class="bi bi-envelope me-1"></i> Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -237,124 +237,188 @@
       </section>
     </main>
 
-    <footer>
-      <!-- Logo de la marca -->
-      <img
-        class="logo"
-        src="../Multimedia/Img/Logo_Celestial_Woods.png"
-        alt="Logo Celestial & Woods"
-      />
+    <!--------------------------------------------------------->
+    <!-------------------PIE DE LA PÁGINA---------------------->
+    <!--------------------------------------------------------->
+    
+     <footer class="bg-black text-light  pt-5 border-top border-1 border-warning">
 
-      <section class="footer-menu">
-        <h3>Menú Navegación</h3>
-        <ul class="nav-list-footer">
-          <li class="nav-item-footer">
-            <a href="../Index.html" class="nav-link-footer"> Inicio</a>
-          </li>
-          <li class="nav-item-footer">
-            <a href="../Paginas/Catalogo_Productos.html" class="nav-link-footer">
-              Catálogo</a
-            >
-          </li>
-          <li class="nav-item-footer">
-            <a href="../Paginas/Guia_fragancias.html" class="nav-link-footer">
-              Guía de Fragancias</a
-            >
-          </li>
-          <li class="nav-item-footer">
-            <a href="../Paginas/Preguntas.html" class="nav-link-footer">
-              Preguntas Frecuentes</a
-            >
-          </li>
-          <li class="nav-item-footer">
-            <a href="../Paginas/Informacion.html" class="nav-link-footer">
-              Quienes somos</a
-            >
-          </li>
-          <li class="nav-item-footer">
-            <a href="#" class="nav-link-footer active">
-              Contacto</a
-            >
-          </li>
-        </ul>
-      </section>
+      <div class="container">
 
-      <section class="footer-social">
-        <h3>Síguenos</h3>
+          <!-- Contenido principal -->
+          <div class="row g-4">
 
-        <nav aria-label="Redes sociales">
-          <a href="#" class="social-icon"> <i class="bi bi-facebook"></i></a>
-          <a href="#" class="social-icon"> <i class="bi bi-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
-        </nav>
-      </section>
+              <!-- Logo -->
+              <div class="col-12 col-lg-3 text-center">
+                  <img
+                      src="../Multimedia/Img/Logo_Celestial_Woods.png"
+                      alt="Logo Celestial & Woods"
+                      class="img-fluid"
+                      style="max-width: 160px;"
+                  >
+              </div>
 
-      <!-- Compra por WhatsApp -->
-      <section class="footer-whatsapp">
-        <i class="bi bi-whatsapp"></i>
 
-        <div class="left">
-          <h3>Compra por WhatsApp</h3>
-          <a href="#"> +506 6000 0000 </a>
+              <!-- Menú de navegación -->
+              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+
+                  <h3 class="h5 fw-bold mb-3">
+                      Menú Navegación
+                  </h3>
+
+                  <ul class="list-unstyled">
+
+                      <li class="mb-2">
+                          <a href="../index.html" class="text-light text-decoration-none nav-link-footer">
+                              Inicio
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="../Paginas/Catalogo_Productos.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Catálogo
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="../Paginas/Guia_fragancias.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Guía de Fragancias
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="../Paginas/Preguntas.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Preguntas Frecuentes
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="../Paginas/Informacion.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Quiénes somos
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="#"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Contacto
+                          </a>
+                      </li>
+
+                  </ul>
+
+              </div>
+
+
+              <!-- Redes sociales + WhatsApp -->
+              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+
+                  <!-- Síguenos -->
+                  <section class="mb-4">
+
+                      <h3 class="h5 fw-bold pb-4">
+                          Síguenos
+                      </h3>
+
+                      <div class="d-flex gap-3 justify-content-center">
+
+                          <a href="#" class="text-light fs-4 social-icon">
+                              <i class="bi bi-facebook m-2"></i>
+                          </a>
+
+                          <a href="#" class="text-light fs-4 social-icon">
+                              <i class="bi bi-instagram m-2"></i>
+                          </a>
+
+                          <a href="#" class="text-light fs-4 social-icon">
+                              <i class="bi bi-tiktok m-2"></i>
+                          </a>
+
+                      </div>
+
+                  </section>
+
+
+                  <!-- WhatsApp -->
+                  <section class="footer-whatsapp text-center pb-4">
+
+                      <h3 class="h5 fw-bold mt-2 pt-4">
+                          <i class="bi bi-whatsapp "></i>
+                          Compra por WhatsApp
+                      </h3>
+
+                      <a href="#" class="text-light text-decoration-none">
+                          +506 6000 0000
+                      </a>
+
+                  </section>
+
+              </div>
+
+
+              <!-- Horarios + información legal -->
+              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+
+                  <!-- Horarios -->
+                  <section class="mb-4">
+
+                      <h3 class="h5 fw-bold mb-3 pt-4 pb-4">
+                          <i class="bi bi-clock"></i>
+                          Horario de atención
+                      </h3>
+
+                      <ul class="list-unstyled">
+
+                          <li class="mb-2">
+                              <i class="bi bi-calendar"></i>
+                              <strong>Lunes a Viernes:</strong>
+                              8:00 a.m. - 6:00 p.m.
+                          </li>
+
+                          <li class="mb-2">
+                              <i class="bi bi-calendar"></i>
+                              <strong>Sábado:</strong>
+                              8:00 a.m. - 6:00 p.m.
+                          </li>
+
+                          <li>
+                              <i class="bi bi-calendar"></i>
+                              <strong>Domingo:</strong>
+                              Cerrado
+                          </li>
+
+                      </ul>
+
+                  </section>
+
+
+                  
+              </div>
+
+          </div>
+
         </div>
-      </section>
 
-      <!-- Horarios -->
-      <section class="footer-hours">
-        <h3><i class="bi bi-clock"></i> Horario de atención</h3>
+        <!-- Copyright -->
+        <div class="row copyright w-100 mt-5">
 
-        <ul>
-          <li>
-            <i class="bi bi-calendar"></i
-            ><strong> Lunes a Viernes:</strong> 8:00 a.m. - 6:00 p.m.
-          </li>
-          <li>
-            <i class="bi bi-calendar"></i><strong> Sábado:</strong> 8:00 a.m. -
-            6:00 p.m.
-          </li>
-          <li>
-            <i class="bi bi-calendar"></i><strong> Domingo:</strong> Cerrado
-          </li>
-        </ul>
-      </section>
+            <div class="col-12 text-center mt-1 py-4">
 
-      <!-- Información legal -->
-      <section class="footer-legal">
-        <nav aria-label="Información legal">
-          <ul class="legal-list">
-            <li class="legal-item">
-              <a href="#" class="legal-link">
-                <span class="legal-left">
-                  <i class="bi bi-shield-check"></i>
-                  <span>Términos y condiciones</span>
-                </span>
+                <p class="mb-0">
+                    &copy; 2026 Celestial & Woods.
+                    Todos los derechos reservados.
+                </p>
 
-                <i class="bi bi-chevron-right"></i>
-              </a>
-            </li>
+            </div>
 
-            <li class="legal-item">
-              <a href="#" class="legal-link">
-                <span class="legal-left">
-                  <i class="bi bi-lock"></i>
-                  <span>Políticas de privacidad</span>
-                </span>
+        </div> 
 
-                <i class="bi bi-chevron-right"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-
-      <!-- Copyright -->
-      <section class="footer-copy">
-        <p>
-          &copy; 2026 Celestial & Woods. <br />
-          Todos los derechos reservados.
-        </p>
-      </section>
     </footer>
+
     <script src="../Java/main.js"></script>
     <!--Se pone al final porque ocupa primero haber leido todo el html-->
   </body>

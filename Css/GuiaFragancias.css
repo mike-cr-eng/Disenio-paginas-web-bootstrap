@@ -1,604 +1,223 @@
-/* Contenedor principal */
+/* =========================================================
+    CONFIGURACIÓN GENERAL
+========================================================= */
+
 main {
   width: 100%;
 }
 
-/*=================================================================================
-    ESTILOS BASE (PARA MOBILE Y DESKTOP)  Y CONFIGURACIÓN MOBILE 
-====================================================================================*/
-
-/* Sección 1: Contenedor Guía de Fragancias */
-.guia-fragancias {
-  width: 100%;
-  background: #000;
+.accordion-custom ul, .accordion-custom p {
+  font-family: "Montserrat", sans-serif;
 }
 
-/* Imagen destacada de la guía */
-.guia-fragancias img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  width: 100%;
-  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-}
-
-/* Contenedor de textos de la guía */
-.guia-contenido {
-  position: relative;
-  z-index: 2;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Título principal de la guía */
-.guia-contenido h1 {
-  margin: 0 0 25px;
-  color: #cba035b9;
+h3, h1, h4,h2,button{
   font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  line-height: 0.9;
-  font-weight: 700;
-  margin-top: -3rem;
+  color: #dcb249b0 !important;
 }
 
-/* Párrafo descriptivo de la guía */
-.guia-contenido p {
-  margin: 0;
-  color: #f5f5f5;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.3rem;
+
+/* =========================================================
+  GUÍA DE FRAGANCIAS
+========================================================= */
+
+.guia-fragancias {
+  background-color: #000;
 }
 
-/* Menú de migas de pan (oculto en móviles) */
+/* Imagen de la guía */
+.guia-imagen {
+  mask-image: linear-gradient(
+    to bottom,
+    black 60%,
+    transparent 100%
+  );
+}
+
+
+
+/* =========================================================
+  BREADCRUMB
+========================================================= */
+
 .breadcrumb {
-  display: none;
+  font-family: "Cormorant Garamond", serif;
+  color: #cccccc;
 }
 
-/* Sección 2: Contenedor de beneficios de la guía */
+.breadcrumb-link {
+  color: #ffffff;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  color: #888888;
+}
+
+.breadcrumb-current {
+  color: #888888;
+}
+
+
+/* =========================================================
+  BENEFICIOS
+========================================================= */
+
 .guide-benefits {
-  background: linear-gradient(180deg, #3c3b3a 0%, #2f2f2f 45%, #232323 100%);
-  padding: 0.9rem;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  background: linear-gradient(
+    180deg,
+    #3c3b3a 0%,
+    #2f2f2f 45%,
+    #232323 100%
+  );
 }
 
-/* Lista de beneficios */
-.guide-benefits ul {
-  width: auto;
-}
 
-/* Título de la sección de beneficios */
-.guide-benefits h2 {
-  text-align: center;
-  padding: 0.7rem;
-  color: #cba03594;
-  font-size: 1.3rem;
-  font-family: "Cormorant Garamond", sans-serif;
-  font-weight: 900;
-}
-
-/* Elementos individuales de la lista de beneficios */
-.guide-benefits li {
-  display: flex;
-  gap: 0.5rem;
-  line-height: 1rem;
-  font-family: "Montserrat", sans-serif;
-  padding: 0.5rem;
-  align-items: center;
-  font-size: 0.75rem;
-}
-
-/* Iconos de la sección de beneficios */
 .guide-benefits .bi {
-  font-size: 1.5rem;
   color: #cba03594;
 }
 
-/* Contenedor general del acordeón */
-.accordion {
-  margin: 1rem 1rem;
-  padding: 0.1rem 0.6rem;
-  border: 0;
-  background-color: #3c3b3a5b;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+/* =========================================================
+  ACORDEONES BOOTSTRAP
+   ========================================================= */
+
+/*
+  Bootstrap ya se encarga de:
+  - abrir y cerrar
+  - transición
+  - padding
+  - icono
+  - responsive
+  - funcionamiento con JavaScript
+*/
+
+.accordion-item {
+  background-color: #3c3b3a5b !important;
+
   box-shadow:
     6px 6px 9px rgba(250, 248, 248, 0.105),
-    0 0 9px rgba(241, 196, 83, 0.914);
+    0 0 9px rgba(241, 196, 83, 0.914) !important;
+
 }
 
-/* Control invisible de activación (Checkbox) */
-input[type="checkbox"] {
-  display: none;
+/* Encabezado */
+.accordion-button {
+  background-color: transparent;
+  color: #cba035b9 !important;
+  background-color: #2f2f2f !important;
+
 }
 
-/* Encabezado interactivo del acordeón */
-.accordion label {
-  display: flex;
-  align-items: center;
-  padding: 0.6rem 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1rem;
-  font-weight: 1000;
-  cursor: pointer;
-  color: #cba035b9;
-}
+/* =========================================================
+  TARJETAS DE LAS FAMILIAS
+========================================================= */
 
-/* Icono indicador cerrado (+) */
-label::before {
-  content: "+";
-  margin-right: 0.4rem;
-  font-size: 1.2rem;
-  font-weight: 1000;
-}
-
-/* Contenedor colapsable del acordeón */
-.accordion .content {
-  padding: 0 10px;
-  line-height: 26px;
-  max-height: 0;
-  overflow: hidden;
-  transition:
-    max-height 0.5s,
-    padding 0.5s;
-}
-
-/* Estado desplegado del contenido del acordeón */
-.accordion input[type="checkbox"]:checked + label + .content {
-  max-height: 2000px;
-  padding: 0.6rem;
-}
-
-/* Icono indicador abierto (-) */
-.accordion input[type="checkbox"]:checked + label::before {
-  content: "-";
-}
-
-/* Tipografía de párrafos y listas dentro del acordeón */
-.accordion p,
-.accordion li {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.82rem;
-  line-height: 1.4rem;
-}
-
-/* Títulos y subtítulos dentro del acordeón */
-.accordion h2,
-.accordion h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1rem;
-  font-weight: 1000;
-  color: #dcb249b0;
-  padding: 0rem;
-}
-
-/* Lista directa dentro del acordeón */
-.accordion .content > ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0.4rem 0;
-}
-
-/* Elementos de lista directa en acordeón */
-.accordion .content > ul > li {
-  position: relative;
-  padding-left: 1rem;
-  margin-bottom: 0.35rem;
-}
-
-/* Viñeta personalizada con rombo (◆) */
-.accordion .content > ul > li::before {
-  content: "◆";
-  color: #cba035;
-  font-size: 0.45rem;
-  position: absolute;
-  left: 0;
-  top: 0.4rem;
-}
-
-/* Tarjetas de contenido dentro del acordeón */
-.accordion .content article {
+.familia-card {
   border: 1px solid rgba(203, 160, 53, 0.25);
-  border-radius: 12px;
-  padding: 0.7rem 0.9rem;
-  margin-bottom: 0.7rem;
   background-color: rgba(0, 0, 0, 0.18);
 }
 
-/* Ajuste de margen para la última tarjeta */
-.accordion .content article:last-child {
-  margin-bottom: 0;
-}
-
-/* Título de las tarjetas de contenido */
-.accordion .content article h3 {
-  margin-bottom: 0.3rem;
-}
-
-/* Subtítulos de categorías en tarjetas */
-.accordion .content article h4 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+.familia-card iconify-icon {
   color: #d4b483;
-  font-weight: 700;
-  margin-top: 0.6rem;
-  margin-bottom: 0.3rem;
 }
 
-/* Lista dentro de las tarjetas */
-.accordion .content article ul {
-  list-style: none;
-  padding-left: 0;
+/* =========================================================
+  TARJETAS DE CONTENIDO
+========================================================= */
+
+.content-card {
+  border: 1px solid rgba(203, 160, 53, 0.25);
+  background-color: rgba(0, 0, 0, 0.18);
 }
 
-/* Elementos de lista dentro de las tarjetas */
-.accordion .content article li {
-  position: relative;
-  padding-left: 0.9rem;
-  margin-bottom: 0.2rem;
+
+
+/* =========================================================
+  LISTAS DENTRO DE LAS TARJETAS
+========================================================= */
+
+.content-card li strong {
+  color: #d4b483;
 }
 
-/* Viñeta de punto (•) en listas de tarjetas */
-.accordion .content article li::before {
-  content: "•";
-  color: #cba035;
-  position: absolute;
-  left: 0;
+
+/* =========================================================
+  BADGE DE LAS NOTAS OLFATIVAS
+========================================================= */
+
+.nota-badge {
+  color: #d4b483;
+  background-color: transparent;
+  border: 1px solid rgba(212, 180, 131, 0.45);
 }
 
-/* Bloque lateral/destacado principal */
-main > aside {
-  background: linear-gradient(180deg, #2a2a2a 0%, #1c1c1c 100%);
+
+/* =========================================================
+  CONSEJO RÁPIDO
+========================================================= */
+
+.consejo {
+  background: linear-gradient(
+    180deg,
+    #2a2a2a 0%,
+    #1c1c1c 100%
+  );
+
   border: 1px solid rgba(203, 160, 53, 0.35);
-  border-radius: 15px;
-  margin: 1.2rem 1rem;
-  padding: 1rem 1.1rem;
-  text-align: center;
   box-shadow:
     6px 6px 9px rgba(250, 248, 248, 0.105),
     0 0 9px rgba(241, 196, 83, 0.914);
 }
 
-/* Título del bloque destacado principal */
-main > aside h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.1rem;
-  font-weight: 900;
-  color: #cba035b9;
-  margin-bottom: 0.5rem;
-}
 
-/* Estrellas decorativas (✦) en el título del bloque destacado */
-main > aside h2::before,
-main > aside h2::after {
-  content: "✦";
-  display: inline-block;
-  color: #d4b48380;
-  font-size: 0.55rem;
-  margin: 0 0.5rem;
-  vertical-align: middle;
-}
 
-/* Texto del bloque destacado principal */
-main > aside p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8rem;
-  line-height: 1.3rem;
-  color: #f5f5f5;
-}
+/* =========================================================
+  ASIDE INTERNO — ELIXIR
+========================================================= */
 
-/* Cuadro de notas dentro del contenido del acordeón */
-.accordion .content aside {
+.content-aside {
   border: 1px dashed rgba(212, 180, 131, 0.4);
-  border-radius: 12px;
-  padding: 0.7rem 0.9rem;
-  margin-top: 0.8rem;
   background-color: rgba(203, 160, 53, 0.06);
-  text-align: left;
 }
 
-/* Título del cuadro de notas */
-.accordion .content aside h3 {
-  margin-bottom: 0.3rem;
+
+
+/* =========================================================
+  PH
+========================================================= */
+
+.ph-content {
+  border: 1px solid rgba(203, 160, 53, 0.35);
+  background-color: rgba(0, 0, 0, 0.18);
 }
 
-/* Iconos temáticos de familias olfativas */
-.familias .content article iconify-icon {
-  font-size: 1.7rem;
-  color: #d4b483;
-  margin-bottom: 0.4rem;
-}
 
-/* Párrafo descriptivo de familias olfativas */
-.familias .content article p {
-  color: #d9d9d9;
-}
+/* =========================================================
+  TABLA DE DURACIÓN
+========================================================= */
 
-/* Etiqueta/Badge de notas olfativas */
-.notas .content article p:last-child {
-  display: inline-block;
-  margin-top: 0.4rem;
-  padding: 0.15rem 0.6rem;
-  font-size: 0.7rem;
-  color: #d4b483;
-  border: 1px solid rgba(212, 180, 131, 0.45);
-  border-radius: 20px;
-}
-
-/* Tabla comparativa de duración */
-.duration .content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 0.8rem 0;
-  border-radius: 10px;
-  overflow: hidden;
+.duration .table {
   font-family: "Montserrat", sans-serif;
 }
 
-/* Celdas generales de la tabla de duración */
-.duration .content th,
-.duration .content td {
-  border: 1px solid rgba(203, 160, 53, 0.25);
-  padding: 0.4rem 0.3rem;
-  text-align: center;
-  font-size: 0.7rem;
+.duration .table th,
+.duration .table td {
+  border-color: rgba(203, 160, 53, 0.25);
 }
 
-/* Encabezados de la tabla de duración */
-.duration .content th {
+.duration .table th {
   background-color: rgba(203, 160, 53, 0.15);
   color: #dcb249b0;
   font-family: "Cormorant Garamond", serif;
-  font-weight: 900;
-  white-space: nowrap;
 }
 
-/* Primera fila destacada de la tabla de duración */
-.duration .content tr:first-child td {
-  background-color: rgba(203, 160, 53, 0.15);
-  color: #dcb249b0;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 900;
-}
-
-/* Texto de datos en celdas de la tabla */
-.duration .content td {
+.duration .table td {
   color: #e8e8e8;
 }
 
-/* Contenedor temático: Sección pH */
-.ph .content {
-  border: 1px solid rgba(203, 160, 53, 0.35);
-  border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.18);
-}
 
-/* Contenedor temático: Sección Aplicación */
-.Aplicacion .content {
-  border: 1px solid rgba(203, 160, 53, 0.35);
-  border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.18);
-}
 
-/* Contenedor temático: Sección Layering */
-.Layering .content {
-  border: 1px solid rgba(203, 160, 53, 0.35);
-  border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.18);
-}
 
-/* Contenedor temático: Sección Conservación */
-.Conserva .content {
-  border: 1px solid rgba(203, 160, 53, 0.35);
-  border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.18);
-}
-
-/* Texto en negrita dentro de listas de artículos */
-.accordion .content article li strong {
-  color: #d4b483;
-}
-
-/*=================================================================================
-    CONFIGURACIÓN DESKTOP / TABLET (mobile-first)
-====================================================================================*/
-
-@media screen and (min-width: 768px) {
-  /* Distribución de la cabecera en dos columnas */
-  .guia-fragancias {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4rem 5%;
-    gap: 4rem;
-    background-color: #000;
-  }
-
-  /* Contenedor de texto de la guía en desktop */
-  .guia-contenido {
-    flex: 1;
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
-
-  /* Título de la guía en desktop */
-  .guia-contenido h1 {
-    font-size: 3.5rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    color: #ffffff;
-    text-align: left;
-    font-family: "Cormorant Garamond", serif;
-  }
-
-  /* Texto de la guía en desktop */
-  .guia-contenido p {
-    font-size: 1rem;
-    line-height: 1.6rem;
-    color: #d9d9d9;
-    text-align: left;
-  }
-
-  /* Imagen destacada en desktop */
-  .guia-fragancias img {
-    flex: 1;
-    max-width: 45%;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    mask-image: none;
-    object-fit: cover;
-  }
-
-  /* Contenedor de migas de pan en desktop */
-  .breadcrumb {
-    display: block;
-    margin-top: 3rem;
-    margin-bottom: 1%;
-    align-self: flex-end;
-    text-align: right;
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic;
-    font-size: 1.4rem;
-    color: #cccccc;
-  }
-
-  /* Enlaces de migas de pan */
-  .breadcrumb-link {
-    color: #ffffff;
-    text-decoration: none;
-  }
-
-  /* Estado hover de enlaces en migas de pan */
-  .breadcrumb-link:hover {
-    text-decoration: underline;
-  }
-
-  /* Separador de migas de pan */
-  .breadcrumb-separator {
-    margin: 0 0.4rem;
-    color: #888888;
-  }
-
-  /* Página actual en migas de pan */
-  .breadcrumb-current {
-    color: #888888;
-  }
-
-  /* Sección de beneficios en desktop */
-  .guide-benefits {
-    padding: 2rem 5%;
-  }
-
-  /* Título de beneficios en desktop */
-  .guide-benefits h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-
-  /* Elementos de lista de beneficios en desktop */
-  .guide-benefits li {
-    font-size: 0.95rem;
-    line-height: 1.5rem;
-    margin-bottom: 0.8rem;
-  }
-
-  /* Estructura del acordeón en desktop */
-  .accordion {
-    margin: 2rem 5%;
-    padding: 0.5rem 2rem;
-  }
-
-  /* Títulos interactivos del acordeón en desktop */
-  .accordion label {
-    font-size: 1.5rem;
-    padding: 1rem 0;
-  }
-
-  /* Cuadrícula (grid) para contenido del acordeón en desktop */
-  .accordion:not(.duration) .content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.5rem;
-    justify-content: center;
-  }
-
-  /* Párrafo de ancho completo dentro del grid del acordeón */
-  .accordion:not(.duration) .content > p {
-    grid-column: 1 / -1;
-  }
-
-  /* Tarjetas cuadradas de contenido en desktop */
-  .accordion .content article {
-    aspect-ratio: 1 / 1;
-    margin: 0;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Bloque destacado principal en desktop */
-  main > aside {
-    margin: 2rem 5%;
-    padding: 1.5rem 2.5rem;
-  }
-
-  /* Título del bloque destacado en desktop */
-  main > aside h2 {
-    font-size: 1.4rem;
-  }
-
-  /* Párrafo del bloque destacado en desktop */
-  main > aside p {
-    font-size: 0.95rem;
-    line-height: 1.6rem;
-  }
-
-  /* Textos y listas generales del acordeón en desktop */
-  .accordion p,
-  .accordion li {
-    font-size: 1rem;
-    line-height: 1.6rem;
-  }
-
-  /* Títulos dentro del contenido del acordeón en desktop */
-  .accordion h2,
-  .accordion h3 {
-    font-size: 1.2rem;
-  }
-
-  /* Subtítulos de tarjetas en desktop */
-  .accordion .content article h4 {
-    font-size: 0.8rem;
-  }
-
-  /* Etiqueta/Badge de notas olfativas en desktop */
-  .notas .content article p:last-child {
-    font-size: 0.8rem;
-    padding: 0.25rem 0.9rem;
-  }
-
-  /* Celdas de tabla de duración en desktop */
-  .duration .content th,
-  .duration .content td {
-    font-size: 0.9rem;
-    padding: 0.7rem 0.6rem;
-  }
-}

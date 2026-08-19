@@ -18,20 +18,18 @@
 
     <title>Inicio | Celestial & Woods</title>
 
-     <!--Para usar bootstrap-->
+    <!--Para usar bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
+
+    <!--Para conectar al archivo de styles-->
     <link href="Css/Styles.css" rel="stylesheet" />
-    <!--Se pone de último para que tenga prioridad-->
+
 
     <!--Para usar bootstrap (iconos)-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
-
-   
-  
 
     <!-- Font Awesome -->
     <link
@@ -66,12 +64,12 @@
                 <!--links-->
                 <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
                     <ul class="navbar-nav align-items-lg-center gap-lg-2">
-                        <li class="nav-item"><a href="#" class="nav-link active fs-5"><i class="bi bi-house-door me-1 fw-bold"></i> Inicio</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link active fs-5 text-nowrap"><i class="bi bi-house-door me-1 fw-bold"></i> Inicio</a></li>
                         <li class="nav-item"><a href="Paginas/Catalogo_Productos.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="fa-solid fa-spray-can-sparkles me-1 "></i> Catálogo</a></li>
                         <li class="nav-item"><a href="Paginas/Guia_fragancias.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="fa-solid fa-leaf me-1"></i> Guía de Fragancias</a></li>
                         <li class="nav-item"><a href="Paginas/Preguntas.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-question-circle me-1"></i> Preguntas Frecuentes</a></li>
                         <li class="nav-item"><a href="Paginas/Informacion.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-person me-1"></i> Quienes somos</a></li>
-                        <li class="nav-item"><a href="Paginas/Contacto.html" class="nav-link fs-5 text-nowra fw-bold"><i class="bi bi-envelope me-1"></i> Contacto</a></li>
+                        <li class="nav-item"><a href="Paginas/Contacto.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-envelope me-1"></i> Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -164,7 +162,7 @@
     <!-------------------PIE DE LA PÁGINA---------------------->
     <!--------------------------------------------------------->
 
-    <footer class="bg-black text-light mt-5 pt-5">
+    <footer class="bg-black text-light  pt-5 border-top border-1 border-warning">
 
       <div class="container">
 
@@ -174,7 +172,7 @@
               <!-- Logo -->
               <div class="col-12 col-lg-3 text-center">
                   <img
-                      src="Multimedia/Img/Logo_Celestial_Woods.png"
+                      src="../Multimedia/Img/Logo_Celestial_Woods.png"
                       alt="Logo Celestial & Woods"
                       class="img-fluid"
                       style="max-width: 160px;"
@@ -198,35 +196,35 @@
                       </li>
 
                       <li class="mb-2">
-                          <a href="Paginas/Catalogo_Productos.html"
+                          <a href="../Paginas/Catalogo_Productos.html"
                             class="text-light text-decoration-none nav-link-footer">
                               Catálogo
                           </a>
                       </li>
 
                       <li class="mb-2">
-                          <a href="Paginas/Guia_fragancias.html"
+                          <a href="../Paginas/Guia_fragancias.html"
                             class="text-light text-decoration-none nav-link-footer">
                               Guía de Fragancias
                           </a>
                       </li>
 
                       <li class="mb-2">
-                          <a href="Paginas/Preguntas.html"
+                          <a href="../Paginas/Preguntas.html"
                             class="text-light text-decoration-none nav-link-footer">
                               Preguntas Frecuentes
                           </a>
                       </li>
 
                       <li class="mb-2">
-                          <a href="Paginas/Informacion.html"
+                          <a href="../Paginas/Informacion.html"
                             class="text-light text-decoration-none nav-link-footer">
                               Quiénes somos
                           </a>
                       </li>
 
                       <li>
-                          <a href="Paginas/Contacto.html"
+                          <a href="../Paginas/Contacto.html"
                             class="text-light text-decoration-none nav-link-footer">
                               Contacto
                           </a>
@@ -267,7 +265,7 @@
 
 
                   <!-- WhatsApp -->
-                  <section>
+                  <section class="footer-whatsapp text-center pb-4">
 
                       <h3 class="h5 fw-bold mt-2 pt-4">
                           <i class="bi bi-whatsapp "></i>
@@ -324,24 +322,23 @@
 
           </div>
 
+        </div>
 
-          <!-- Copyright -->
-          <div class="row">
+        <!-- Copyright -->
+        <div class="row copyright w-100 mt-5">
 
-              <div class="col-12 text-center border-top mt-4 py-4">
+            <div class="col-12 text-center mt-1 py-4">
 
-                  <p class="mb-0">
-                      &copy; 2026 Celestial & Woods.
-                      Todos los derechos reservados.
-                  </p>
+                <p class="mb-0">
+                    &copy; 2026 Celestial & Woods.
+                    Todos los derechos reservados.
+                </p>
 
-              </div>
+            </div>
 
-          </div>
+        </div> 
 
-      </div>
-
-</footer>
+    </footer>
 
     <script src="Java/main.js"></script>
     <!--Se pone al final porque ocupa primero haber leido todo el html-->
