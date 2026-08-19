@@ -9,13 +9,13 @@
 
   /*Configuración general de los íconos*/
   .bi-house-door, .fa-solid, .bi-question-circle, .bi-person, .bi-envelope {
-    color: #d4b483;
+    color: white;
     font-size: 1.2rem;
   }
 
   /*Contenedor (a) para manejar lo que está dentro el texto. Padre de los textos*/
   .nav-link {
-    color: #d4b483 !important;
+    color: white !important;
     transition: .3s;
     font-family: "Cormorant Garamond", sans-serif;
 
@@ -41,12 +41,16 @@
     font-family: "Montserrat",sans-serif;
   }
 
-  
+  footer h3 {
+    font-family: "Cormorant Garamond",sans-serif;
+    
+  }
 
+  
   .nav-link-footer:hover {
   /*Cuando se pasa el mouse por los link del nav*/
     background: none;
-    color: #f6deb0;
+    color: #f6deb0 !important;
   }
 
   .social-icon{
@@ -60,34 +64,29 @@
       transform: translateY(-4px);
   }
 
+  /*Para que los íconos se pongan de ese color*/
   footer .bi{
   
     color: #cba135;
 
   }
 
-   .footer-whatsapp {
-   
+  .footer-whatsapp {
     border: solid 1px #cba135;
     border-radius: 10px;
-    
   }
 
   .footer-whatsapp a:hover {
-    color: #cba135;
+    color: #cba135 !important;
   }
 
-  .legal-link:hover{
-    color: #cba135;
-  }
+  /* =========================================================
+  copyright
+========================================================= */
 
-.legal-link:hover .bi-chevron-right{
-    transform: translateX(5px);
-  }
-
-.bi-chevron-right{
-    transition: transform .3s ease;
-  }
+.copyright {
+  background-color: #2a2a2a;
+}
 
   
 /* ==========================================================================
@@ -114,11 +113,8 @@
 
   .nav-link:hover i{ /*cuando pasen el mouse por ahi tambien cambie de color los iconos*/
       color: black;
-    }
-
-  /*-------------------------------------------------------------------*/
-  /*-------------------------CONFIGURACIÓN FOOTER----------------------*/
-  /*-------------------------------------------------------------------*/
-
   }
+
+
+}
 
