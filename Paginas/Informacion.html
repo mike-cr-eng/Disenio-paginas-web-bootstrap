@@ -45,85 +45,43 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
   </head>
-  <body class="bg-black">
+  <body>
     <!--------------------------------------------------------->
     <!------------------------MENU----------------------------->
     <!--------------------------------------------------------->
 
-    <header id="barra-navegacion" class="container-fluid p-0">
+    <section id="barra-navegacion" class="container-fluid p-0">
+        
       <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <div class="container-fluid px-4">
-          <!--Logo-->
-          <a class="navbar-brand fw-bold" href="#">
-            <img
-              src="../Multimedia/Img/Logo_Celestial_Woods.png"
-              alt="Logo Celestial & Woods"
-              class="img-fluid"
-              style="max-height: 10rem"
-            />
-          </a>
+            
+          <div class="container-fluid px-4">
 
-          <!--Botón hamburguesa-->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menuPrincipal"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+              <!--Logo-->
+                <a class="navbar-brand fw-bold" href="#">
+                  <img src="../Multimedia/Img/Logo_Celestial_Woods.png"
+                  alt="Logo Celestial & Woods" class="img-fluid"
+                    style="max-height: 10rem;"/>
+                </a>
+              
+                <!--Botón hamburguesa-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-          <!--links-->
-          <div
-            class="collapse navbar-collapse justify-content-center"
-            id="menuPrincipal"
-          >
-            <ul class="navbar-nav align-items-lg-center gap-lg-2">
-              <li class="nav-item">
-                <a href="../index.html" class="nav-link fs-5 text-nowrap"
-                  ><i class="bi bi-house-door me-1 fw-bold"></i> Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="../Paginas/Catalogo_Productos.html"
-                  class="nav-link fs-5 text-nowrap fw-bold"
-                  ><i class="fa-solid fa-spray-can-sparkles me-1"></i>
-                  Catálogo</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="../Paginas/Guia_fragancias.html"
-                  class="nav-link fs-5 text-nowrap fw-bold"
-                  ><i class="fa-solid fa-leaf me-1"></i> Guía de Fragancias</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="../Paginas/Preguntas.html"
-                  class="nav-link fs-5 text-nowrap fw-bold"
-                  ><i class="bi bi-question-circle me-1"></i> Preguntas
-                  Frecuentes</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link active fs-5 text-nowrap fw-bold"
-                  ><i class="bi bi-person me-1"></i> Quienes somos</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="../Paginas/Contacto.html"
-                  class="nav-link fs-5 text-nowrap fw-bold"
-                  ><i class="bi bi-envelope me-1"></i> Contacto</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+                <!--links-->
+                <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-2">
+                        <li class="nav-item"><a href="../index.html" class="nav-link fs-5 text-nowrap"><i class="bi bi-house-door me-1 fw-bold"></i> Inicio</a></li>
+                        <li class="nav-item"><a href="../Paginas/Catalogo_Productos.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="fa-solid fa-spray-can-sparkles me-1 "></i> Catálogo</a></li>
+                        <li class="nav-item"><a href="../Paginas/Guia_fragancias.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="fa-solid fa-leaf me-1"></i> Guía de Fragancias</a></li>
+                        <li class="nav-item"><a href="../Paginas/Preguntas.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-question-circle me-1"></i> Preguntas Frecuentes</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link active fs-5 text-nowrap fw-bold"><i class="bi bi-person me-1"></i> Quienes somos</a></li>
+                        <li class="nav-item"><a href="../Paginas/Contacto.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-envelope me-1"></i> Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
     <!--------------------------------------------------------->
     <!------------------------MAIN----------------------------->
     <!--------------------------------------------------------->
@@ -211,158 +169,185 @@
     <!-------------------PIE DE LA PÁGINA---------------------->
     <!--------------------------------------------------------->
 
-    <footer class="bg-black text-light pt-5 border-top border-1 border-warning">
+     <footer class="bg-black text-light  pt-5 border-top border-1 border-warning">
+
       <div class="container">
-        <!-- Contenido principal -->
-        <div class="row g-4">
-          <!-- Logo -->
-          <div class="col-12 col-lg-3 text-center">
-            <img
-              src="../Multimedia/Img/Logo_Celestial_Woods.png"
-              alt="Logo Celestial & Woods"
-              class="img-fluid"
-              style="max-width: 160px"
-            />
-          </div>
 
-          <!-- Menú de navegación -->
-          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
-            <h3 class="h5 fw-bold mb-3">Menú Navegación</h3>
+          <!-- Contenido principal -->
+          <div class="row g-4">
 
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a
-                  href="../index.html"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Inicio
-                </a>
-              </li>
-
-              <li class="mb-2">
-                <a
-                  href="../Paginas/Catalogo_Productos.html"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Catálogo
-                </a>
-              </li>
-
-              <li class="mb-2">
-                <a
-                  href="../Paginas/Guia_fragancias.html"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Guía de Fragancias
-                </a>
-              </li>
-
-              <li class="mb-2">
-                <a
-                  href="../Paginas/Preguntas.html"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Preguntas Frecuentes
-                </a>
-              </li>
-
-              <li class="mb-2">
-                <a
-                  href="#"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Quiénes somos
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="../Paginas/Contacto.html"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Contacto
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Redes sociales + WhatsApp -->
-          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
-            <!-- Síguenos -->
-            <section class="mb-4">
-              <h3 class="h5 fw-bold pb-4">Síguenos</h3>
-
-              <div class="d-flex gap-3 justify-content-center">
-                <a href="#" class="text-light fs-4 social-icon">
-                  <i class="bi bi-facebook m-2"></i>
-                </a>
-
-                <a href="#" class="text-light fs-4 social-icon">
-                  <i class="bi bi-instagram m-2"></i>
-                </a>
-
-                <a href="#" class="text-light fs-4 social-icon">
-                  <i class="bi bi-tiktok m-2"></i>
-                </a>
+              <!-- Logo -->
+              <div class="col-12 col-lg-3 text-center">
+                  <img
+                      src="../Multimedia/Img/Logo_Celestial_Woods.png"
+                      alt="Logo Celestial & Woods"
+                      class="img-fluid"
+                      style="max-width: 160px;"
+                  >
               </div>
-            </section>
 
-            <!-- WhatsApp -->
-            <section class="footer-whatsapp text-center pb-4">
-              <h3 class="h5 fw-bold mt-2 pt-4">
-                <i class="bi bi-whatsapp"></i>
-                Compra por WhatsApp
-              </h3>
 
-              <a href="#" class="text-light text-decoration-none">
-                +506 6000 0000
-              </a>
-            </section>
+              <!-- Menú de navegación -->
+              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+
+                  <h3 class="h5 fw-bold mb-3">
+                      Menú Navegación
+                  </h3>
+
+                  <ul class="list-unstyled">
+
+                      <li class="mb-2">
+                          <a href="../index.html" class="text-light text-decoration-none nav-link-footer">
+                              Inicio
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="../Paginas/Catalogo_Productos.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Catálogo
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="../Paginas/Guia_fragancias.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Guía de Fragancias
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="../Paginas/Preguntas.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Preguntas Frecuentes
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="#"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Quiénes somos
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="../Paginas/Contacto.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Contacto
+                          </a>
+                      </li>
+
+                  </ul>
+
+              </div>
+
+
+              <!-- Redes sociales + WhatsApp -->
+              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+
+                  <!-- Síguenos -->
+                  <section class="mb-4">
+
+                      <h3 class="h5 fw-bold pb-4">
+                          Síguenos
+                      </h3>
+
+                      <div class="d-flex gap-3 justify-content-center">
+
+                          <a href="#" class="text-light fs-4 social-icon">
+                              <i class="bi bi-facebook m-2"></i>
+                          </a>
+
+                          <a href="#" class="text-light fs-4 social-icon">
+                              <i class="bi bi-instagram m-2"></i>
+                          </a>
+
+                          <a href="#" class="text-light fs-4 social-icon">
+                              <i class="bi bi-tiktok m-2"></i>
+                          </a>
+
+                      </div>
+
+                  </section>
+
+
+                  <!-- WhatsApp -->
+                  <section class="footer-whatsapp text-center pb-4">
+
+                      <h3 class="h5 fw-bold mt-2 pt-4">
+                          <i class="bi bi-whatsapp "></i>
+                          Compra por WhatsApp
+                      </h3>
+
+                      <a href="#" class="text-light text-decoration-none">
+                          +506 6000 0000
+                      </a>
+
+                  </section>
+
+              </div>
+
+
+              <!-- Horarios + información legal -->
+              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+
+                  <!-- Horarios -->
+                  <section class="mb-4">
+
+                      <h3 class="h5 fw-bold mb-3 pt-4 pb-4">
+                          <i class="bi bi-clock"></i>
+                          Horario de atención
+                      </h3>
+
+                      <ul class="list-unstyled">
+
+                          <li class="mb-2">
+                              <i class="bi bi-calendar"></i>
+                              <strong>Lunes a Viernes:</strong>
+                              8:00 a.m. - 6:00 p.m.
+                          </li>
+
+                          <li class="mb-2">
+                              <i class="bi bi-calendar"></i>
+                              <strong>Sábado:</strong>
+                              8:00 a.m. - 6:00 p.m.
+                          </li>
+
+                          <li>
+                              <i class="bi bi-calendar"></i>
+                              <strong>Domingo:</strong>
+                              Cerrado
+                          </li>
+
+                      </ul>
+
+                  </section>
+
+
+                  
+              </div>
+
           </div>
 
-          <!-- Horarios + información legal -->
-          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
-            <!-- Horarios -->
-            <section class="mb-4">
-              <h3 class="h5 fw-bold mb-3 pt-4 pb-4">
-                <i class="bi bi-clock"></i>
-                Horario de atención
-              </h3>
-
-              <ul class="list-unstyled">
-                <li class="mb-2">
-                  <i class="bi bi-calendar"></i>
-                  <strong>Lunes a Viernes:</strong>
-                  8:00 a.m. - 6:00 p.m.
-                </li>
-
-                <li class="mb-2">
-                  <i class="bi bi-calendar"></i>
-                  <strong>Sábado:</strong>
-                  8:00 a.m. - 6:00 p.m.
-                </li>
-
-                <li>
-                  <i class="bi bi-calendar"></i>
-                  <strong>Domingo:</strong>
-                  Cerrado
-                </li>
-              </ul>
-            </section>
-          </div>
         </div>
-      </div>
 
-      <!-- Copyright -->
-      <div class="row copyright w-100 mt-5">
-        <div class="col-12 text-center mt-1 py-4">
-          <p class="mb-0">
-            &copy; 2026 Celestial & Woods. Todos los derechos reservados.
-          </p>
-        </div>
-      </div>
-    </footer>
+        <!-- Copyright -->
+        <div class="row copyright w-100 mt-5">
+
+            <div class="col-12 text-center mt-1 py-4">
+
+                <p class="mb-0">
+                    &copy; 2026 Celestial & Woods.
+                    Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div> 
+
+    </footer> 
     <script src="../Java/main.js"></script>
     <!--Se pone al final porque ocupa primero haber leido todo el html-->
+  
   </body>
 </html>

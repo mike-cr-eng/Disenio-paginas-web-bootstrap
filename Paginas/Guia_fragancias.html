@@ -33,12 +33,7 @@
     />
 
     <!--Para usar bootstrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- Font Awesome -->
     <link
@@ -53,92 +48,54 @@
     <!------------------------MENU----------------------------->
     <!--------------------------------------------------------->
 
-    <header id="barra-navegacion" class="container-fluid p-0">
+    <section id="barra-navegacion" class="container-fluid p-0">
+        
       <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <div class="container-fluid px-4">
-          <!--Logo-->
-          <a class="navbar-brand fw-bold" href="#">
-            <img
-              src="../Multimedia/Img/Logo_Celestial_Woods.png"
-              alt="Logo Celestial & Woods"
-              class="img-fluid"
-              style="max-height: 10rem"
-            />
-          </a>
+            
+          <div class="container-fluid px-4">
 
-          <!--Botón hamburguesa-->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menuPrincipal"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+              <!--Logo-->
+                <a class="navbar-brand fw-bold" href="#">
+                  <img src="../Multimedia/Img/Logo_Celestial_Woods.png"
+                  alt="Logo Celestial & Woods" class="img-fluid"
+                    style="max-height: 10rem;"/>
+                </a>
+              
+                <!--Botón hamburguesa-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-          <!--links-->
-          <div
-            class="collapse navbar-collapse justify-content-center"
-            id="menuPrincipal"
-          >
-            <ul class="navbar-nav align-items-lg-center gap-lg-2">
-              <li class="nav-item">
-                <a href="../index.html" class="nav-link fs-5 text-nowrap"
-                  ><i class="bi bi-house-door me-1 fw-bold"></i> Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="../Paginas/Catalogo_Productos.html"
-                  class="nav-link fs-5 text-nowrap fw-bold"
-                  ><i class="fa-solid fa-spray-can-sparkles me-1"></i>
-                  Catálogo</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link active fs-5 text-nowrap fw-bold"
-                  ><i class="fa-solid fa-leaf me-1"></i> Guía de Fragancias</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="../Paginas/Preguntas.html"
-                  class="nav-link fs-5 text-nowrap fw-bold"
-                  ><i class="bi bi-question-circle me-1"></i> Preguntas
-                  Frecuentes</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="../Paginas/Informacion.html"
-                  class="nav-link fs-5 text-nowrap fw-bold"
-                  ><i class="bi bi-person me-1"></i> Quienes somos</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="../Paginas/Contacto.html"
-                  class="nav-link fs-5 text-nowrap fw-bold"
-                  ><i class="bi bi-envelope me-1"></i> Contacto</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+                <!--links-->
+                <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-2">
+                        <li class="nav-item"><a href="../index.html" class="nav-link fs-5 text-nowrap"><i class="bi bi-house-door me-1 fw-bold"></i> Inicio</a></li>
+                        <li class="nav-item"><a href="../Paginas/Catalogo_Productos.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="fa-solid fa-spray-can-sparkles me-1 "></i> Catálogo</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link active fs-5 text-nowrap fw-bold"><i class="fa-solid fa-leaf me-1"></i> Guía de Fragancias</a></li>
+                        <li class="nav-item"><a href="../Paginas/Preguntas.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-question-circle me-1"></i> Preguntas Frecuentes</a></li>
+                        <li class="nav-item"><a href="../Paginas/Informacion.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-person me-1"></i> Quienes somos</a></li>
+                        <li class="nav-item"><a href="../Paginas/Contacto.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-envelope me-1"></i> Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
 
     <!--------------------------------------------------------->
     <!------------------------MAIN----------------------------->
     <!--------------------------------------------------------->
 
-    <main class="w-100 bg-black pb-4">
+  <main class="w-100 bg-black  pb-4">
+
       <!-- =========================================================
           GUÍA DE FRAGANCIAS
           ========================================================= -->
-      <section
-        class="guia-fragancias bg-black d-flex flex-column flex-md-row align-items-center justify-content-between gap-4 gap-md-5 px-3 px-md-5 py-4 py-md-5"
-      >
+      <section class="guia-fragancias bg-black
+                      d-flex flex-column flex-md-row
+                      align-items-center justify-content-between
+                      gap-4 gap-md-5
+                      px-3 px-md-5 py-4 py-md-5">
+
         <!-- Imagen -->
         <img
           src="../Multimedia/pexels-behrouz-alimardani-152148858-10873814.webp"
@@ -148,8 +105,9 @@
 
         <!-- Contenido -->
         <div class="guia-contenido flex-grow-1">
+
           <h1 class="mb-3">
-            Guía de <br />
+            Guía de <br>
             Fragancias
           </h1>
 
@@ -158,32 +116,47 @@
             Descubre los tipos de fragancias, sus notas y consejos para
             aprovecharlas al máximo.
           </p>
+
         </div>
+
       </section>
 
       <!-- Breadcrumb -->
-      <nav class="breadcrumb d-none d-md-block" aria-label="breadcrumb">
-        <a href="../Index.html" class="breadcrumb-link"> Inicio </a>
+        <nav
+          class="breadcrumb d-none d-md-block"
+          aria-label="breadcrumb"
+        >
+          <a
+            href="../Index.html"
+            class="breadcrumb-link"
+          >
+            Inicio
+          </a>
 
-        <span class="breadcrumb-separator">&gt;</span>
+          <span class="breadcrumb-separator">&gt;</span>
 
-        <span class="breadcrumb-current"> Guía Fragancias </span>
-      </nav>
+          <span class="breadcrumb-current">
+            Guía Fragancias
+          </span>
+        </nav>
+
 
       <!-- =========================================================
           BENEFICIOS
           ========================================================= -->
       <section class="guide-benefits px-3 px-md-5 py-3 py-md-4">
+
         <h2 class="text-center mb-4 fw-bold">
           ¿Por qué esta guía es importante para ti?
         </h2>
 
         <ul class="list-unstyled mb-0">
+
           <li class="d-flex align-items-center gap-2 mb-3 text-white">
             <i class="bi bi-check2-circle"></i>
             <span>
-              Te ayuda a elegir aromas que van con tu personalidad, estilos y
-              ocasión.
+              Te ayuda a elegir aromas que van con tu personalidad,
+              estilos y ocasión.
             </span>
           </li>
 
@@ -207,20 +180,28 @@
               Conoces cómo cuidar tus fragancias para que duren más.
             </span>
           </li>
+
         </ul>
+
       </section>
+
 
       <!-- =========================================================
           ACORDEONES
           ========================================================= -->
+      
+      <div class="accordion-custom px-3 px-md-5 pt-4 ">
 
-      <div class="accordion-custom px-3 px-md-5 pt-4">
+
         <!-- =======================================================
             1. FAMILIAS DE AROMAS
             ======================================================= -->
         <div class="accordion my-3" id="accordionFamilias">
+
           <div class="accordion-item rounded">
+
             <h2 class="accordion-header">
+
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -231,6 +212,7 @@
               >
                 Familias de Aromas
               </button>
+
             </h2>
 
             <div
@@ -238,92 +220,143 @@
               class="accordion-collapse collapse"
               data-bs-parent="#accordionFamilias"
             >
+
               <div class="accordion-body">
+
                 <p class="text-light text-center">
                   Cada familia tiene su propio carácter y puede despertar
                   diferentes emociones.
                 </p>
 
                 <div class="row g-3">
+
                   <!-- Floral -->
                   <article class="col-12 col-sm-6 col-lg-4">
                     <div class="familia-card h-100 text-center p-3 rounded">
-                      <iconify-icon icon="ion:flower"></iconify-icon>
+
+                      <iconify-icon
+                        icon="ion:flower"
+                      ></iconify-icon>
 
                       <h3>Floral</h3>
 
-                      <p class="text-light">Romántica, femenina y elegante.</p>
+                      <p class="text-light">
+                        Romántica, femenina y elegante.
+                      </p>
+
                     </div>
                   </article>
+
 
                   <!-- Frutal -->
                   <article class="col-12 col-sm-6 col-lg-4">
                     <div class="familia-card h-100 text-center p-3 rounded">
-                      <iconify-icon icon="healthicons:fruits"></iconify-icon>
+
+                      <iconify-icon
+                        icon="healthicons:fruits"
+                      ></iconify-icon>
 
                       <h3>Frutal</h3>
 
-                      <p class="text-light">Jugosa, dulce y alegre.</p>
+                      <p class="text-light">
+                        Jugosa, dulce y alegre.
+                      </p>
+
                     </div>
                   </article>
+
 
                   <!-- Cítrica -->
                   <article class="col-12 col-sm-6 col-lg-4">
                     <div class="familia-card h-100 text-center p-3 rounded">
-                      <iconify-icon icon="tabler:lemon"></iconify-icon>
+
+                      <iconify-icon
+                        icon="tabler:lemon"
+                      ></iconify-icon>
 
                       <h3>Cítrica</h3>
 
-                      <p class="text-light">Fresca, vibrante y energizante.</p>
+                      <p class="text-light">
+                        Fresca, vibrante y energizante.
+                      </p>
+
                     </div>
                   </article>
+
 
                   <!-- Aromática -->
                   <article class="col-12 col-sm-6 col-lg-4">
                     <div class="familia-card h-100 text-center p-3 rounded">
-                      <iconify-icon icon="mdi:pine-tree"></iconify-icon>
+
+                      <iconify-icon
+                        icon="mdi:pine-tree"
+                      ></iconify-icon>
 
                       <h3>Aromática</h3>
 
-                      <p class="text-light">Herbal, natural y equilibrada.</p>
+                      <p class="text-light">
+                        Herbal, natural y equilibrada.
+                      </p>
+
                     </div>
                   </article>
+
 
                   <!-- Oriental -->
                   <article class="col-12 col-sm-6 col-lg-4">
                     <div class="familia-card h-100 text-center p-3 rounded">
-                      <iconify-icon icon="mdi:flower-lotus"></iconify-icon>
+
+                      <iconify-icon
+                        icon="mdi:flower-lotus"
+                      ></iconify-icon>
 
                       <h3>Oriental</h3>
 
-                      <p class="text-light">Cálida, intensa y sofisticada.</p>
+                      <p class="text-light">
+                        Cálida, intensa y sofisticada.
+                      </p>
+
                     </div>
                   </article>
+
 
                   <!-- Gourmand -->
                   <article class="col-12 col-sm-6 col-lg-4">
                     <div class="familia-card h-100 text-center p-3 rounded">
+
                       <iconify-icon
                         icon="game-icons:wrapped-sweet"
                       ></iconify-icon>
 
                       <h3>Gourmand</h3>
 
-                      <p class="text-light">Dulce, acogedora y adictiva.</p>
+                      <p class="text-light">
+                        Dulce, acogedora y adictiva.
+                      </p>
+
                     </div>
                   </article>
+
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
 
         <!-- =======================================================
             2. NOTAS OLFATIVAS
             ======================================================= -->
         <div class="accordion my-3" id="accordionNotas">
+
           <div class="accordion-item">
+
             <h2 class="accordion-header">
+
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -334,6 +367,7 @@
               >
                 Notas Olfativas
               </button>
+
             </h2>
 
             <div
@@ -341,44 +375,56 @@
               class="accordion-collapse collapse"
               data-bs-parent="#accordionNotas"
             >
+
               <div class="accordion-body">
+
                 <p class="text-light text-center">
-                  Los aromas se sienten en 3 etapas. Así evoluciona una
-                  fragancia en tu piel:
+                  Los aromas se sienten en 3 etapas.
+                  Así evoluciona una fragancia en tu piel:
                 </p>
 
                 <div class="row g-3">
+
                   <article class="col-12 col-lg-4">
                     <div class="content-card h-100 p-3 text-center">
+
                       <h3>Notas de Salida</h3>
 
                       <p class="text-light">
-                        Son las primeras que percibes al aplicar el perfume. Son
-                        frescas y ligeras.
+                        Son las primeras que percibes al aplicar el perfume.
+                        Son frescas y ligeras.
                       </p>
 
-                      <span class="badge nota-badge"> Duración: 5-15 min </span>
+                      <span class="badge nota-badge">
+                        Duración: 5-15 min
+                      </span>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-lg-4">
                     <div class="content-card h-100 p-3 text-center">
+
                       <h3>Notas de Corazón</h3>
 
                       <p class="text-light">
-                        Representan el alma de la fragancia. Aportan carácter y
-                        se perciben después de que las notas de salida se
-                        desvanecen.
+                        Representan el alma de la fragancia. Aportan carácter
+                        y se perciben después de que las notas de salida
+                        se desvanecen.
                       </p>
 
                       <span class="badge nota-badge">
                         Duración: 20 min - 2 h
                       </span>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-lg-4">
                     <div class="content-card h-100 p-3 text-center">
+
                       <h3>Notas de Fondo</h3>
 
                       <p class="text-light">
@@ -386,42 +432,55 @@
                       </p>
 
                       <p class="text-light">
-                        Se perciben cuando las notas de corazón comienzan a
-                        desaparecer.
+                        Se perciben cuando las notas de corazón comienzan
+                        a desaparecer.
                       </p>
 
                       <span class="badge nota-badge">
                         Duración: Más de 2 h
                       </span>
+
                     </div>
                   </article>
+
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
 
         <!-- =======================================================
             CONSEJO
             ======================================================= -->
         <aside class="my-4 p-4 consejo rounded">
+
           <h2 class="text-center">
             <i class="bi bi-lightbulb"></i>
             Consejo Rápido
           </h2>
 
           <p class="mb-0 text-center text-light">
-            Prueba siempre el perfume sobre tu piel y no únicamente en una tira
-            de papel.
+            Prueba siempre el perfume sobre tu piel y no únicamente
+            en una tira de papel.
           </p>
+
         </aside>
+
 
         <!-- =======================================================
             3. DURACIÓN
             ======================================================= -->
         <div class="accordion my-3" id="accordionDuration">
+
           <div class="accordion-item">
+
             <h2 class="accordion-header">
+
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -432,6 +491,7 @@
               >
                 ¿Cuánto dura un aroma?
               </button>
+
             </h2>
 
             <div
@@ -439,17 +499,20 @@
               class="accordion-collapse collapse"
               data-bs-parent="#accordionDuration"
             >
+
               <div class="accordion-body">
+
                 <p class="text-light">
                   La duración depende de la concentración y del tipo de piel.
                 </p>
 
                 <!-- Tabla responsive -->
-                <div class="table-responsive">
-                  <table
-                    class="table table-bordered text-center align-middle table-dark"
-                  >
+                <div class="table-responsive ">
+
+                  <table class="table table-bordered text-center align-middle table-dark">
+
                     <thead>
+
                       <tr>
                         <th>TIPO</th>
                         <th>PARFUM</th>
@@ -458,9 +521,11 @@
                         <th>EAU DE COLOGNE</th>
                         <th>EAU FRAICHE</th>
                       </tr>
+
                     </thead>
 
                     <tbody>
+
                       <tr>
                         <th>CONCENTRACIÓN</th>
                         <td>20-30%</td>
@@ -478,43 +543,62 @@
                         <td>2 h</td>
                         <td>1-2 h</td>
                       </tr>
+
                     </tbody>
+
                   </table>
+
                 </div>
 
-                <h3>¿Para qué sirve la concentración?</h3>
+
+                <h3>
+                  ¿Para qué sirve la concentración?
+                </h3>
 
                 <p class="text-light">
-                  Te ayuda a elegir la ocasión y cuánto quieres que dure el
-                  aroma.
+                  Te ayuda a elegir la ocasión y cuánto quieres que dure
+                  el aroma.
                 </p>
+
 
                 <!-- Elixir -->
                 <aside class="content-aside">
-                  <h3>¿Qué significa "Elixir"?</h3>
+
+                  <h3>
+                    ¿Qué significa "Elixir"?
+                  </h3>
 
                   <p class="text-light">
-                    <strong>Elixir</strong> no es una categoría oficial de
-                    concentración. Muchas marcas utilizan este nombre para
-                    identificar una versión más intensa de una fragancia, con
-                    mayor duración y proyección.
+                    <strong>Elixir</strong> no es una categoría oficial
+                    de concentración. Muchas marcas utilizan este nombre
+                    para identificar una versión más intensa de una fragancia,
+                    con mayor duración y proyección.
                   </p>
 
                   <p class="mb-0 text-light">
                     Su concentración puede variar según la marca.
                   </p>
+
                 </aside>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
 
         <!-- =======================================================
             4. PH
             ======================================================= -->
         <div class="accordion my-3" id="accordionPh">
+
           <div class="accordion-item">
+
             <h2 class="accordion-header">
+
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -525,6 +609,7 @@
               >
                 ¿Qué es el pH?
               </button>
+
             </h2>
 
             <div
@@ -532,10 +617,12 @@
               class="accordion-collapse collapse"
               data-bs-parent="#accordionPh"
             >
+
               <div class="accordion-body ph-content">
+
                 <p class="text-light">
-                  El pH es la medida que indica si la piel es más ácida, neutra
-                  o alcalina.
+                  El pH es la medida que indica si la piel es más ácida,
+                  neutra o alcalina.
                 </p>
 
                 <p class="text-light">
@@ -543,23 +630,33 @@
                   afectando su aroma y duración.
                 </p>
 
-                <h3>¿Por qué es importante?</h3>
+                <h3>
+                  ¿Por qué es importante?
+                </h3>
 
                 <p class="mb-0 text-light">
                   Dos personas pueden usar el mismo aroma y oler diferente.
                   Conocer tu piel te ayuda a elegir mejor.
                 </p>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
 
         <!-- =======================================================
             5. TIPOS DE PERFUMERÍA
             ======================================================= -->
         <div class="accordion my-3" id="accordionTypes">
+
           <div class="accordion-item">
+
             <h2 class="accordion-header">
+
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -570,6 +667,7 @@
               >
                 Tipos de perfumería
               </button>
+
             </h2>
 
             <div
@@ -577,21 +675,25 @@
               class="accordion-collapse collapse"
               data-bs-parent="#accordionTypes"
             >
+
               <div class="accordion-body">
+
                 <p class="text-light">
-                  Conoce las principales categorías según el origen, estilo o
-                  forma de comercialización de las fragancias. Independiente de
-                  la concentración.
+                  Conoce las principales categorías según el origen,
+                  estilo o forma de comercialización de las fragancias.
+                  Independiente de la concentración.
                 </p>
 
                 <div class="row g-3">
+
                   <article class="col-12 col-md-6 col-xl-4">
                     <div class="content-card h-100 p-3">
+
                       <h3>Perfumería de diseñador</h3>
 
                       <p class="text-light">
-                        Son perfumes creados por marcas reconocidas de moda y
-                        lujo.
+                        Son perfumes creados por marcas reconocidas
+                        de moda y lujo.
                       </p>
 
                       <h4>Ejemplos:</h4>
@@ -611,11 +713,14 @@
                         <li>Fácil disponibilidad.</li>
                         <li>Excelente relación calidad-precio.</li>
                       </ul>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-md-6 col-xl-4">
                     <div class="content-card h-100 p-3">
+
                       <h3>Perfumería Nicho</h3>
 
                       <p class="text-light">
@@ -630,16 +735,19 @@
                         <li>Aromas poco comunes.</li>
                         <li>Mayor exclusividad.</li>
                       </ul>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-md-6 col-xl-4">
                     <div class="content-card h-100 p-3">
+
                       <h3>Perfumería Árabe</h3>
 
                       <p class="text-light">
-                        Se caracteriza por utilizar ingredientes intensos y de
-                        gran duración.
+                        Se caracteriza por utilizar ingredientes intensos
+                        y de gran duración.
                       </p>
 
                       <h4>Notas comunes:</h4>
@@ -659,16 +767,19 @@
                         <li>Gran proyección.</li>
                         <li>Excelente relación calidad-precio.</li>
                       </ul>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-md-6 col-xl-4">
                     <div class="content-card h-100 p-3">
+
                       <h3>Perfumería Artesanal</h3>
 
                       <p class="text-light">
-                        Fragancias elaboradas por pequeños perfumistas o casas
-                        independientes.
+                        Fragancias elaboradas por pequeños perfumistas
+                        o casas independientes.
                       </p>
 
                       <h4>Características:</h4>
@@ -679,16 +790,19 @@
                         <li>Ingredientes seleccionados.</li>
                         <li>Diseños únicos.</li>
                       </ul>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-md-6 col-xl-4">
                     <div class="content-card h-100 p-3">
+
                       <h3>Perfumería de catálogo</h3>
 
                       <p class="text-light">
-                        Perfumes vendidos mediante distribuidoras o venta
-                        directa.
+                        Perfumes vendidos mediante distribuidoras
+                        o venta directa.
                       </p>
 
                       <h4>Características:</h4>
@@ -698,36 +812,49 @@
                         <li>Gran variedad.</li>
                         <li>Inspiración de perfumes famosos.</li>
                       </ul>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-md-6 col-xl-4">
                     <div class="content-card h-100 p-3">
+
                       <h3>Perfumería Nicho o alta gama</h3>
 
                       <p class="text-light">
-                        No significa que sea caro. Se refiere a perfumes que
-                        destacan por:
+                        No significa que sea caro. Se refiere a perfumes
+                        que destacan por:
                       </p>
 
                       <ul class="text-light">
                         <li>Materias primas de excelente calidad.</li>
                         <li>Mejor construcción de la fragancia.</li>
                       </ul>
+
                     </div>
                   </article>
+
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
 
         <!-- =======================================================
             6. APLICACIÓN
             ======================================================= -->
         <div class="accordion my-3" id="accordionApply">
+
           <div class="accordion-item">
+
             <h2 class="accordion-header">
+
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -738,6 +865,7 @@
               >
                 ¿Dónde aplicar el perfume?
               </button>
+
             </h2>
 
             <div
@@ -745,7 +873,9 @@
               class="accordion-collapse collapse"
               data-bs-parent="#accordionApply"
             >
+
               <div class="accordion-body">
+
                 <ul class="text-light">
                   <li>Detrás de las orejas.</li>
                   <li>Cuello.</li>
@@ -753,17 +883,25 @@
                   <li>Interior del codo.</li>
                   <li>Detrás de las rodillas.</li>
                 </ul>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
 
         <!-- =======================================================
             7. ESCOGER PERFUME
             ======================================================= -->
         <div class="accordion my-3" id="accordionChoose">
+
           <div class="accordion-item">
+
             <h2 class="accordion-header">
+
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -774,6 +912,7 @@
               >
                 ¿Cómo escoger tu perfume ideal?
               </button>
+
             </h2>
 
             <div
@@ -781,94 +920,118 @@
               class="accordion-collapse collapse"
               data-bs-parent="#accordionChoose"
             >
+
               <div class="accordion-body">
+
                 <p class="text-light text-center">
                   Elegir un perfume no depende únicamente de cuál huela mejor.
-                  También influyen la ocasión, el clima, la hora del día, la
-                  concentración y las características de tu piel.
+                  También influyen la ocasión, el clima, la hora del día,
+                  la concentración y las características de tu piel.
                 </p>
 
                 <div class="row g-3">
+
                   <article class="col-12 col-md-6">
                     <div class="content-card h-100 p-3">
+
                       <h3>Para el trabajo o la universidad</h3>
 
                       <ul class="text-light">
                         <li>
-                          Familias recomendadas: Cítricas, Aromáticas y Florales
-                          suaves.
+                          Familias recomendadas: Cítricas, Aromáticas
+                          y Florales suaves.
                         </li>
 
                         <li>
-                          Concentración recomendada: Eau de Toilette (EDT) o Eau
-                          de Cologne (EDC).
+                          Concentración recomendada:
+                          Eau de Toilette (EDT) o Eau de Cologne (EDC).
                         </li>
 
-                        <li>Busca aromas frescos, limpios y discretos.</li>
+                        <li>
+                          Busca aromas frescos, limpios y discretos.
+                        </li>
                       </ul>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-md-6">
                     <div class="content-card h-100 p-3">
+
                       <h3>Para el día</h3>
 
                       <ul class="text-light">
                         <li>
-                          Familias recomendadas: Cítricas, Frutales y
-                          Aromáticas.
+                          Familias recomendadas: Cítricas,
+                          Frutales y Aromáticas.
                         </li>
-
-                        <li>Concentración recomendada: Eau de Toilette.</li>
 
                         <li>
-                          Ideales para climas cálidos y actividades al aire
-                          libre.
+                          Concentración recomendada:
+                          Eau de Toilette.
+                        </li>
+
+                        <li>
+                          Ideales para climas cálidos y actividades al aire libre.
                         </li>
                       </ul>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-md-6">
                     <div class="content-card h-100 p-3">
+
                       <h3>Para la noche</h3>
 
                       <ul class="text-light">
                         <li>
-                          Familias recomendadas: Orientales, Gourmand y
-                          Amaderadas.
+                          Familias recomendadas:
+                          Orientales, Gourmand y Amaderadas.
                         </li>
 
                         <li>
-                          Concentración recomendada: Eau de Parfum o Parfum.
+                          Concentración recomendada:
+                          Eau de Parfum o Parfum.
                         </li>
 
-                        <li>Son aromas intensos, cálidos y envolventes.</li>
+                        <li>
+                          Son aromas intensos, cálidos y envolventes.
+                        </li>
                       </ul>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-md-6">
                     <div class="content-card h-100 p-3">
+
                       <h3>Para ocasiones especiales</h3>
 
                       <ul class="text-light">
                         <li>Prefiere perfumes con mayor duración.</li>
 
                         <li>
-                          Las familias Orientales y Gourmand suelen destacar.
+                          Las familias Orientales y Gourmand
+                          suelen destacar.
                         </li>
 
                         <li>
-                          Un Eau de Parfum o Parfum suele ofrecer mejor
-                          desempeño.
+                          Un Eau de Parfum o Parfum suele ofrecer
+                          mejor desempeño.
                         </li>
                       </ul>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-md-6">
                     <div class="content-card h-100 p-3">
+
                       <h3>Según el clima</h3>
 
                       <ul class="text-light">
@@ -882,65 +1045,85 @@
                           Orientales, Gourmand o Amaderados.
                         </li>
                       </ul>
+
                     </div>
                   </article>
 
+
                   <article class="col-12 col-md-6">
                     <div class="content-card h-100 p-3">
+
                       <h3>Según tu tipo de piel</h3>
 
                       <ul class="text-light">
                         <li>
-                          Las pieles grasas suelen conservar el aroma por más
-                          tiempo.
+                          Las pieles grasas suelen conservar
+                          el aroma por más tiempo.
                         </li>
 
                         <li>
-                          Las pieles secas pueden requerir reaplicar el perfume
-                          o hidratar la piel antes de usarlo.
+                          Las pieles secas pueden requerir reaplicar
+                          el perfume o hidratar la piel antes de usarlo.
                         </li>
 
                         <li>
-                          El pH también puede hacer que un mismo perfume huela
-                          diferente en cada persona.
+                          El pH también puede hacer que un mismo perfume
+                          huela diferente en cada persona.
                         </li>
                       </ul>
+
                     </div>
                   </article>
+
 
                   <article class="col-12">
                     <div class="content-card p-3">
+
                       <h3>Antes de comprar</h3>
 
                       <ul class="text-light">
-                        <li>Prueba el perfume sobre tu piel.</li>
-
                         <li>
-                          Espera al menos 20 o 30 minutos para conocer las notas
-                          de corazón.
+                          Prueba el perfume sobre tu piel.
                         </li>
 
-                        <li>No pruebes demasiados perfumes al mismo tiempo.</li>
+                        <li>
+                          Espera al menos 20 o 30 minutos para conocer
+                          las notas de corazón.
+                        </li>
 
                         <li>
-                          Elige el aroma con el que te sientas cómodo e
-                          identificado.
+                          No pruebes demasiados perfumes al mismo tiempo.
+                        </li>
+
+                        <li>
+                          Elige el aroma con el que te sientas cómodo
+                          e identificado.
                         </li>
                       </ul>
+
                     </div>
                   </article>
+
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
 
         <!-- =======================================================
             8. LAYERING
             ======================================================= -->
         <div class="accordion my-3" id="accordionLayering">
+
           <div class="accordion-item">
+
             <h2 class="accordion-header">
+
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -951,6 +1134,7 @@
               >
                 Layering
               </button>
+
             </h2>
 
             <div
@@ -958,22 +1142,32 @@
               class="accordion-collapse collapse"
               data-bs-parent="#accordionLayering"
             >
+
               <div class="accordion-body">
+
                 <p class="mb-0 text-light">
-                  Combina productos de la misma fragancia para aumentar la
-                  duración e intensidad del aroma.
+                  Combina productos de la misma fragancia para aumentar
+                  la duración e intensidad del aroma.
                 </p>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
 
         <!-- =======================================================
             9. CONSERVACIÓN
             ======================================================= -->
         <div class="accordion my-3" id="accordionConservation">
+
           <div class="accordion-item">
+
             <h2 class="accordion-header">
+
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -984,6 +1178,7 @@
               >
                 ¿Cómo conservar tus aromas?
               </button>
+
             </h2>
 
             <div
@@ -991,181 +1186,224 @@
               class="accordion-collapse collapse"
               data-bs-parent="#accordionConservation"
             >
+
               <div class="accordion-body">
+
                 <ul class="text-light">
                   <li>Evita la luz directa.</li>
 
-                  <li>Mantén el perfume lejos del calor.</li>
+                  <li>
+                    Mantén el perfume lejos del calor.
+                  </li>
 
-                  <li>Evita la humedad.</li>
+                  <li>
+                    Evita la humedad.
+                  </li>
 
-                  <li>Guárdalo en un lugar fresco y seco.</li>
+                  <li>
+                    Guárdalo en un lugar fresco y seco.
+                  </li>
                 </ul>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </main>
 
     <!--------------------------------------------------------->
     <!-------------------PIE DE LA PÁGINA---------------------->
     <!--------------------------------------------------------->
 
-    <footer class="bg-black text-light pt-5 border-top border-1 border-warning">
+    <footer class="bg-black text-light  pt-5 border-top border-1 border-warning">
+
       <div class="container">
-        <!-- Contenido principal -->
-        <div class="row g-4">
-          <!-- Logo -->
-          <div class="col-12 col-lg-3 text-center">
-            <img
-              src="../Multimedia/Img/Logo_Celestial_Woods.png"
-              alt="Logo Celestial & Woods"
-              class="img-fluid"
-              style="max-width: 160px"
-            />
-          </div>
 
-          <!-- Menú de navegación -->
-          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
-            <h3 class="h5 fw-bold mb-3">Menú Navegación</h3>
+          <!-- Contenido principal -->
+          <div class="row g-4">
 
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a
-                  href="../index.html"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Inicio
-                </a>
-              </li>
-
-              <li class="mb-2">
-                <a
-                  href="../Paginas/Catalogo_Productos.html"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Catálogo
-                </a>
-              </li>
-
-              <li class="mb-2">
-                <a
-                  href="#"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Guía de Fragancias
-                </a>
-              </li>
-
-              <li class="mb-2">
-                <a
-                  href="../Paginas/Preguntas.html"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Preguntas Frecuentes
-                </a>
-              </li>
-
-              <li class="mb-2">
-                <a
-                  href="../Paginas/Informacion.html"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Quiénes somos
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="../Paginas/Contacto.html"
-                  class="text-light text-decoration-none nav-link-footer"
-                >
-                  Contacto
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Redes sociales + WhatsApp -->
-          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
-            <!-- Síguenos -->
-            <section class="mb-4">
-              <h3 class="h5 fw-bold pb-4">Síguenos</h3>
-
-              <div class="d-flex gap-3 justify-content-center">
-                <a href="#" class="text-light fs-4 social-icon">
-                  <i class="bi bi-facebook m-2"></i>
-                </a>
-
-                <a href="#" class="text-light fs-4 social-icon">
-                  <i class="bi bi-instagram m-2"></i>
-                </a>
-
-                <a href="#" class="text-light fs-4 social-icon">
-                  <i class="bi bi-tiktok m-2"></i>
-                </a>
+              <!-- Logo -->
+              <div class="col-12 col-lg-3 text-center">
+                  <img
+                      src="../Multimedia/Img/Logo_Celestial_Woods.png"
+                      alt="Logo Celestial & Woods"
+                      class="img-fluid"
+                      style="max-width: 160px;"
+                  >
               </div>
-            </section>
 
-            <!-- WhatsApp -->
-            <section class="footer-whatsapp text-center pb-4">
-              <h3 class="h5 fw-bold mt-2 pt-4">
-                <i class="bi bi-whatsapp"></i>
-                Compra por WhatsApp
-              </h3>
 
-              <a href="#" class="text-light text-decoration-none">
-                +506 6000 0000
-              </a>
-            </section>
+              <!-- Menú de navegación -->
+              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+
+                  <h3 class="h5 fw-bold mb-3">
+                      Menú Navegación
+                  </h3>
+
+                  <ul class="list-unstyled">
+
+                      <li class="mb-2">
+                          <a href="../index.html" class="text-light text-decoration-none nav-link-footer">
+                              Inicio
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="../Paginas/Catalogo_Productos.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Catálogo
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="#"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Guía de Fragancias
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="../Paginas/Preguntas.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Preguntas Frecuentes
+                          </a>
+                      </li>
+
+                      <li class="mb-2">
+                          <a href="../Paginas/Informacion.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Quiénes somos
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="../Paginas/Contacto.html"
+                            class="text-light text-decoration-none nav-link-footer">
+                              Contacto
+                          </a>
+                      </li>
+
+                  </ul>
+
+              </div>
+
+
+              <!-- Redes sociales + WhatsApp -->
+              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+
+                  <!-- Síguenos -->
+                  <section class="mb-4">
+
+                      <h3 class="h5 fw-bold pb-4">
+                          Síguenos
+                      </h3>
+
+                      <div class="d-flex gap-3 justify-content-center">
+
+                          <a href="#" class="text-light fs-4 social-icon">
+                              <i class="bi bi-facebook m-2"></i>
+                          </a>
+
+                          <a href="#" class="text-light fs-4 social-icon">
+                              <i class="bi bi-instagram m-2"></i>
+                          </a>
+
+                          <a href="#" class="text-light fs-4 social-icon">
+                              <i class="bi bi-tiktok m-2"></i>
+                          </a>
+
+                      </div>
+
+                  </section>
+
+
+                  <!-- WhatsApp -->
+                  <section class="footer-whatsapp text-center pb-4">
+
+                      <h3 class="h5 fw-bold mt-2 pt-4">
+                          <i class="bi bi-whatsapp "></i>
+                          Compra por WhatsApp
+                      </h3>
+
+                      <a href="#" class="text-light text-decoration-none">
+                          +506 6000 0000
+                      </a>
+
+                  </section>
+
+              </div>
+
+
+              <!-- Horarios + información legal -->
+              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+
+                  <!-- Horarios -->
+                  <section class="mb-4">
+
+                      <h3 class="h5 fw-bold mb-3 pt-4 pb-4">
+                          <i class="bi bi-clock"></i>
+                          Horario de atención
+                      </h3>
+
+                      <ul class="list-unstyled">
+
+                          <li class="mb-2">
+                              <i class="bi bi-calendar"></i>
+                              <strong>Lunes a Viernes:</strong>
+                              8:00 a.m. - 6:00 p.m.
+                          </li>
+
+                          <li class="mb-2">
+                              <i class="bi bi-calendar"></i>
+                              <strong>Sábado:</strong>
+                              8:00 a.m. - 6:00 p.m.
+                          </li>
+
+                          <li>
+                              <i class="bi bi-calendar"></i>
+                              <strong>Domingo:</strong>
+                              Cerrado
+                          </li>
+
+                      </ul>
+
+                  </section>
+
+
+                  
+              </div>
+
           </div>
 
-          <!-- Horarios + información legal -->
-          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
-            <!-- Horarios -->
-            <section class="mb-4">
-              <h3 class="h5 fw-bold mb-3 pt-4 pb-4">
-                <i class="bi bi-clock"></i>
-                Horario de atención
-              </h3>
-
-              <ul class="list-unstyled">
-                <li class="mb-2">
-                  <i class="bi bi-calendar"></i>
-                  <strong>Lunes a Viernes:</strong>
-                  8:00 a.m. - 6:00 p.m.
-                </li>
-
-                <li class="mb-2">
-                  <i class="bi bi-calendar"></i>
-                  <strong>Sábado:</strong>
-                  8:00 a.m. - 6:00 p.m.
-                </li>
-
-                <li>
-                  <i class="bi bi-calendar"></i>
-                  <strong>Domingo:</strong>
-                  Cerrado
-                </li>
-              </ul>
-            </section>
-          </div>
         </div>
-      </div>
 
-      <!-- Copyright -->
-      <div class="row copyright w-100 mt-5">
-        <div class="col-12 text-center mt-1 py-4">
-          <p class="mb-0">
-            &copy; 2026 Celestial & Woods. Todos los derechos reservados.
-          </p>
-        </div>
-      </div>
+        <!-- Copyright -->
+        <div class="row copyright w-100 mt-5">
+
+            <div class="col-12 text-center mt-1 py-4">
+
+                <p class="mb-0">
+                    &copy; 2026 Celestial & Woods.
+                    Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div> 
+
     </footer>
 
     <script src="../Java/main.js"></script>
     <!--Se pone al final porque ocupa primero haber leido todo el html-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
   </body>
 </html>
