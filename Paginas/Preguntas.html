@@ -21,18 +21,24 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Bootstrap 5.3 CSS: se carga antes que los estilos propios para que
+         Preguntas.css/Styles.css tengan prioridad y no rompan el tema oscuro -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+
     <link rel="stylesheet" href="../Css/Preguntas.css" />
 
     <title>Preguntas Frecuentes | Celestial & Woods</title>
     <link href="../Css/Styles.css" rel="stylesheet" />
-    <!--Se pone de último para que tenga prioridad-->
+    <!--Se pone de ultimo para que tenga prioridad-->
 
-    <!--Para usar bootstrap (iconos)-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
-    
 
     <!-- Font Awesome -->
     <link
@@ -99,22 +105,24 @@
       </nav>
     </header>
 
-    <!--------------------------------------------------------->
-    <!----------------PARTE DEBAJO DEL MENU-------------------->
-    <!--------------------------------------------------------->
-
-    <section Class="Title">
-      <h1>Preguntas Frecuentes</h1>
-      <p>
-        En esta sección encontrarás respuestas a las preguntas más comunes sobre
-        nuestros productos, servicios y políticas. Si no encuentras la
-        información que buscas, no dudes en contactarnos.
-      </p>
-      <!-- el src="#" es un marcador temporal -->
-      <img
-        src="../Multimedia/Img/Preguntas.png"
-        alt="Imagen Preguntas Frecuentes"
-      />
+    <section class="Title">
+      <div class="Title-content">
+        <div class="title-text">
+          <h1>Preguntas Frecuentes</h1>
+          <p>
+            En esta sección encontrarás respuestas a las preguntas más comunes
+            sobre nuestros productos, servicios y políticas. Si no encuentras la
+            información que buscas, no dudes en contactarnos.
+          </p>
+        </div>
+        <div class="title-image-wrap">
+          <img
+            src="../Multimedia/Img/Preguntas.png"
+            alt="Imagen Preguntas Frecuentes"
+            class="title-img"
+          />
+        </div>
+      </div>
     </section>
 
     <!--------------------------------------------------------->
@@ -122,123 +130,216 @@
     <!--------------------------------------------------------->
 
     <main>
-      <section class="Details-question">
-        <!-- src="#" es un marcador temporal -->
-        <i class="bi bi-check-circle"></i>
-        <details>
-          <summary>Los perfumes son originales?</summary>
-          <p>
-            Sí. En Celestial Woods garantizamos que el 100% de nuestras
-            fragancias son originales y auténticas. Trabajamos directamente con
-            distribuidores autorizados y cada perfume cuenta con su código de
-            lote y sellos de seguridad.
-          </p>
-        </details>
-      </section>
+      <!-- Acordeon oficial de Bootstrap 5.3, variante "flush" (sin bordes ni
+           esquinas redondeadas): https://getbootstrap.com/docs/5.3/components/accordion/
+           data-bs-theme="dark" activa el modo oscuro propio de Bootstrap para
+           que los colores del componente combinen con el fondo del sitio -->
+      <div class="accordion accordion-flush" id="faqAccordion" data-bs-theme="dark">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq1"
+              aria-expanded="false"
+              aria-controls="faq1"
+            >
+              <i class="bi bi-check-circle faq-icon"></i>
+              Los perfumes son originales?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí. En Celestial Woods garantizamos que el 100% de nuestras
+              fragancias son originales y auténticas. Trabajamos directamente
+              con distribuidores autorizados y cada perfume cuenta con su
+              código de lote y sellos de seguridad.
+            </div>
+          </div>
+        </div>
 
-      <hr />
-      <section class="Details-question">
-        <i class="bi bi-truck"></i>
-        <details>
-          <summary>Realizan envios?</summary>
-          <p>
-            Sí. Realizamos envíos a nivel nacional en todo Costa Rica. Contamos
-            con diferentes métodos de envío para que elijas el que mejor se
-            adapte a tus tiempos.
-          </p>
-        </details>
-      </section>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq2"
+              aria-expanded="false"
+              aria-controls="faq2"
+            >
+              <i class="bi bi-truck faq-icon"></i>
+              Realizan envios?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí. Realizamos envíos a nivel nacional en todo Costa Rica.
+              Contamos con diferentes métodos de envío para que elijas el que
+              mejor se adapte a tus tiempos.
+            </div>
+          </div>
+        </div>
 
-      <hr />
-      <section class="Details-question">
-        <i class="bi bi-question-circle"></i>
-        <details>
-          <summary>Que métodos de pago aceptan?</summary>
-          <p>Aceptamos SINPE Móvil y pago en efectivo contra entrega.</p>
-        </details>
-      </section>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq3"
+              aria-expanded="false"
+              aria-controls="faq3"
+            >
+              <i class="bi bi-question-circle faq-icon"></i>
+              Que métodos de pago aceptan?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Aceptamos SINPE Móvil y pago en efectivo contra entrega.
+            </div>
+          </div>
+        </div>
 
-      <hr />
-      <section class="Details-question">
-        <i class="bi bi-bag-check"></i>
-        <details>
-          <summary>Como realizo una compra?</summary>
-          <p>
-            Comprar en Celestial Woods es muy sencillo: Elige tu fragancia en
-            nuestro Catálogo o Guía de Fragancias y completa tus datos de envío
-            Selecciona tu método de pago: SINPE Móvil o pago en efectivo contra
-            entrega Confirma tu pedido y nosotros nos encargamos del resto
-          </p>
-        </details>
-      </section>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq4"
+              aria-expanded="false"
+              aria-controls="faq4"
+            >
+              <i class="bi bi-bag-check faq-icon"></i>
+              Como realizo una compra?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Comprar en Celestial Woods es muy sencillo: Elige tu fragancia
+              en nuestro Catálogo o Guía de Fragancias y completa tus datos de
+              envío Selecciona tu método de pago: SINPE Móvil o pago en
+              efectivo contra entrega Confirma tu pedido y nosotros nos
+              encargamos del resto
+            </div>
+          </div>
+        </div>
 
-      <hr />
-      <section class="Details-question">
-        <i class="bi bi-arrow-clockwise"></i>
-        <details>
-          <summary>Puedo cambiar o devolver un producto?</summary>
-          <p>
-            Aceptamos devoluciones únicamente si el perfume llegó dañado o con
-            defectos de fábrica. En ese caso, contáctanos dentro de las primeras
-            24 horas de recibido y te daremos una solución inmediata: cambio o
-            reembolso. Por temas de higiene y seguridad, no aceptamos
-            devoluciones ni cambios de perfumes que ya hayan sido abiertos o
-            utilizados.
-          </p>
-        </details>
-      </section>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq5"
+              aria-expanded="false"
+              aria-controls="faq5"
+            >
+              <i class="bi bi-arrow-clockwise faq-icon"></i>
+              Puedo cambiar o devolver un producto?
+            </button>
+          </h2>
+          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Aceptamos devoluciones únicamente si el perfume llegó dañado o
+              con defectos de fábrica. En ese caso, contáctanos dentro de las
+              primeras 24 horas de recibido y te daremos una solución
+              inmediata: cambio o reembolso. Por temas de higiene y seguridad,
+              no aceptamos devoluciones ni cambios de perfumes que ya hayan
+              sido abiertos o utilizados.
+            </div>
+          </div>
+        </div>
 
-      <hr />
-      <section class="Details-question">
-        <i class="bi bi-currency-dollar"></i>
-        <details>
-          <summary>Los precios pueden cambiar?</summary>
-          <p>
-            Sí. El precio puede variar dependiendo de la concentración de la
-            fragancia, su intensidad y exclusividad. Cada perfume tiene un valor
-            que refleja su calidad y composición. Aun así, en Celestial Woods
-            trabajamos para que el lujo sea accesible para todos.
-          </p>
-        </details>
-      </section>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq6"
+              aria-expanded="false"
+              aria-controls="faq6"
+            >
+              <i class="bi bi-currency-dollar faq-icon"></i>
+              Los precios pueden cambiar?
+            </button>
+          </h2>
+          <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí. El precio puede variar dependiendo de la concentración de la
+              fragancia, su intensidad y exclusividad. Cada perfume tiene un
+              valor que refleja su calidad y composición. Aun así, en
+              Celestial Woods trabajamos para que el lujo sea accesible para
+              todos.
+            </div>
+          </div>
+        </div>
 
-      <hr />
-      <section class="Details-question">
-        <i class="bi bi-person-arms-up"></i>
-        <details>
-          <summary>Como puedo saber cual perfume elegir?</summary>
-          <p>
-            Te ayudamos a encontrar tu esencia ideal. En nuestra Guía de
-            Fragancias puedes explorar por notas, género y ocasión. Además,
-            nuestro equipo de asesores está disponible para recomendarte la
-            fragancia perfecta según tu estilo, personalidad y el momento que
-            quieras marcar.
-          </p>
-        </details>
-      </section>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq7"
+              aria-expanded="false"
+              aria-controls="faq7"
+            >
+              <i class="bi bi-person-arms-up faq-icon"></i>
+              Como puedo saber cual perfume elegir?
+            </button>
+          </h2>
+          <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Te ayudamos a encontrar tu esencia ideal. En nuestra Guía de
+              Fragancias puedes explorar por notas, género y ocasión. Además,
+              nuestro equipo de asesores está disponible para recomendarte la
+              fragancia perfecta según tu estilo, personalidad y el momento
+              que quieras marcar.
+            </div>
+          </div>
+        </div>
 
-      <hr />
-      <section class="Details-question">
-        <i class="bi bi-house-door"></i>
-        <details>
-          <summary>Tienen tienda física?</summary>
-          <p>
-            Actualmente somos una tienda virtual. Esto nos permite ofrecerte
-            mejores precios y llevar Celestial Woods hasta la puerta de tu casa
-            en todo el país.
-          </p>
-        </details>
-      </section>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq8"
+              aria-expanded="false"
+              aria-controls="faq8"
+            >
+              <i class="bi bi-house-door faq-icon"></i>
+              Tienen tienda física?
+            </button>
+          </h2>
+          <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Actualmente somos una tienda virtual. Esto nos permite ofrecerte
+              mejores precios y llevar Celestial Woods hasta la puerta de tu
+              casa en todo el país.
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <hr />
       <!-- Bloque final invitando a contactar por WhatsApp  -->
       <section class="Class-Ayuda">
-        <div>
-          <i class="bi bi-whatsapp"></i>
+        <div class="Class-Ayuda-content">
+          <div class="Class-Ayuda-icon">
+            <i class="bi bi-whatsapp"></i>
+          </div>
+          <div class="Class-Ayuda-text">
+            <h4>Necesitas ayuda?</h4>
+            <p>Escribenos por WhatsApp y con gusto te atenderemos.</p>
+            <p class="Class-Ayuda-number">57 300 000 00 00</p>
+          </div>
         </div>
-        <h4>Necesitas ayuda?</h4>
-        <p>Escribenos por whatsapp y con gusto te atenderemos.</p>
-        <p>+57 300 000 00 00</p>
       </section>
     </main>
 
@@ -366,6 +467,10 @@
         </p>
       </section>
     </footer>
+
+    <!-- Bundle de Bootstrap (incluye Popper): necesario para que el
+         acordeon funcione, ya que usa data-bs-toggle="collapse" -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../Java/main.js"></script>
   </body>
 </html>

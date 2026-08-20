@@ -11,9 +11,15 @@ body {
   margin: 0 auto 3%;
 }
 
-/* Breadcrumb */
+/* Breadcrumb: componente oficial de Bootstrap (.breadcrumb .breadcrumb-item),
+   cargado desde bootstrap.min.css. Aqui solo se ajustan color y tipografia
+   con las variables oficiales del componente para que combine con el tema
+   oscuro; el separador "/" ya lo dibuja Bootstrap con --bs-breadcrumb-divider. */
 .breadcrumb {
+  --bs-breadcrumb-divider-color: #888888;
+  --bs-breadcrumb-item-active-color: #888888;
   margin-bottom: 1%;
+  padding: 0;
   font-size: 0.85rem;
   color: #cccccc;
 }
@@ -25,15 +31,6 @@ body {
 
 .breadcrumb-link:hover {
   text-decoration: underline;
-}
-
-.breadcrumb-separator {
-  margin: 0 0.4rem;
-  color: #888888;
-}
-
-.breadcrumb-current {
-  color: #888888;
 }
 
 /* Buscador */
