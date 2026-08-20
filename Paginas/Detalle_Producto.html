@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,11 +9,11 @@
     />
     <meta
       name="description"
-      content="Conoce todos los detalles de tu perfume favorito en Celestial & Woods. Descubre sus notas olfativas, familia aromática, concentración, duración y recomendaciones para elegir la fragancia ideal."
+      content="Descubre perfumes exclusivos para mujer, hombre y unisex. Encuentra la fragancia perfecta en Celestial & Woods."
     />
     <meta
       name="keywords"
-      content="detalle de perfume, perfume, fragancia, notas olfativas, familia olfativa, duración del perfume, concentración, perfume para hombre, perfume para mujer, perfume unisex, Celestial & Woods"
+      content="perfumes, fragancias, perfumes originales, perfumes para mujer, perfumes para hombre, tienda de perfumes"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -23,18 +23,27 @@
     />
 
     <!-- Bootstrap 5.3 CSS: se carga antes que los estilos propios para que
-         DetalleProducto.css/Styles.css tengan prioridad -->
+         Preguntas.css/Styles.css tengan prioridad y no rompan el tema oscuro -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
 
-    <link rel="stylesheet" href="../Css/Styles.css" />
-    <link rel="stylesheet" href="../Css/DetalleProducto.css" />
-    <title>Detalle Producto | Celestial & Woods</title>
+    <link rel="stylesheet" href="../Css/Preguntas.css" />
 
+    <title>Preguntas Frecuentes | Celestial & Woods</title>
+
+    <!--Para usar bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link href="../Css/Styles.css" rel="stylesheet" />
     <!--Se pone de ultimo para que tenga prioridad-->
-    <!--Para usar bootstrap (iconos)-->
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -46,316 +55,520 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
   </head>
-  <body>
+
+  <body class="bg-black">
     <!--------------------------------------------------------->
     <!------------------------MENU----------------------------->
     <!--------------------------------------------------------->
 
-    <section id="barra-navegacion" class="container-fluid p-0">
-        
+    <header id="barra-navegacion" class="container-fluid p-0">
       <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-            
-          <div class="container-fluid px-4">
+        <div class="container-fluid px-4">
+          <!--Logo-->
+          <a class="navbar-brand fw-bold" href="#">
+            <img
+              src="../Multimedia/Img/Logo_Celestial_Woods.png"
+              alt="Logo Celestial & Woods"
+              class="img-fluid"
+              style="max-height: 10rem"
+            />
+          </a>
 
-              <!--Logo-->
-                <a class="navbar-brand fw-bold" href="#">
-                  <img src="../Multimedia/Img/Logo_Celestial_Woods.png"
-                  alt="Logo Celestial & Woods" class="img-fluid"
-                    style="max-height: 10rem;"/>
-                </a>
-              
-                <!--Botón hamburguesa-->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!--links-->
-                <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
-                    <ul class="navbar-nav align-items-lg-center gap-lg-2">
-                        <li class="nav-item"><a href="../index.html" class="nav-link fs-5 text-nowrap"><i class="bi bi-house-door me-1 fw-bold"></i> Inicio</a></li>
-                        <li class="nav-item"><a href="../Paginas/Catalogo_Productos.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="fa-solid fa-spray-can-sparkles me-1 "></i> Catálogo</a></li>
-                        <li class="nav-item"><a href="../Paginas/Guia_fragancias.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="fa-solid fa-leaf me-1"></i> Guía de Fragancias</a></li>
-                        <li class="nav-item"><a href="../Paginas/Preguntas.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-question-circle me-1"></i> Preguntas Frecuentes</a></li>
-                        <li class="nav-item"><a href="../Paginas/Informacion.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-person me-1"></i> Quienes somos</a></li>
-                        <li class="nav-item"><a href="../Paginas/Contacto.html" class="nav-link fs-5 text-nowrap fw-bold"><i class="bi bi-envelope me-1"></i> Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
-
-    <main class="main-content">
-      <!-- Ruta de navegacion (breadcrumb): componente oficial de Bootstrap 5.3
-           https://getbootstrap.com/docs/5.3/components/breadcrumb/
-           El separador "/" ya no se escribe a mano: Bootstrap lo agrega solo
-           con la variable --bs-breadcrumb-divider en cada .breadcrumb-item -->
-      <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="../Index.html" class="breadcrumb-link">Inicio</a>
-          </li>
-          <li class="breadcrumb-item">
-            <a href="Catalogo_Productos.html" class="breadcrumb-link"
-              >Catalogo</a
-            >
-          </li>
-          <li
-            class="breadcrumb-item active breadcrumb-current"
-            aria-current="page"
+          <!--Botón hamburguesa-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
           >
-            Sauvage
-          </li>
-        </ol>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--links-->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="menuPrincipal"
+          >
+            <ul class="navbar-nav align-items-lg-center gap-lg-2">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link fs-5 text-nowrap"
+                  ><i class="bi bi-house-door me-1 fw-bold"></i> Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="../Paginas/Catalogo_Productos.html"
+                  class="nav-link fs-5 text-nowrap fw-bold"
+                  ><i class="fa-solid fa-spray-can-sparkles me-1"></i>
+                  Catálogo</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="../Paginas/Guia_fragancias.html"
+                  class="nav-link fs-5 text-nowrap fw-bold"
+                  ><i class="fa-solid fa-leaf me-1"></i> Guía de Fragancias</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link active fs-5 text-nowrap fw-bold"
+                  ><i class="bi bi-question-circle me-1"></i> Preguntas
+                  Frecuentes</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="../Paginas/Informacion.html"
+                  class="nav-link fs-5 text-nowrap fw-bold"
+                  ><i class="bi bi-person me-1"></i> Quienes somos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="../Paginas/Contacto.html"
+                  class="nav-link fs-5 text-nowrap fw-bold"
+                  ><i class="bi bi-envelope me-1"></i> Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
+    </header>
 
-      <!-- Buscador que redirige al catalogo -->
-      <section class="search-section">
-        <h3>Catalogo de productos</h3>
-        <form class="search-form" action="Catalogo_Productos.html" method="get">
-          <input
-            type="text"
-            id="search"
-            name="search"
-            placeholder="Buscar productos..."
-            maxlength="100"
-          />
-          <button type="submit" class="search-button">Buscar</button>
-        </form>
-      </section>
-
-      <!-- Seccion principal con la informacion del producto -->
-      <section class="product-detail">
-        <!-- Miniaturas -->
-        <aside class="product-gallery">
+    <section class="Title">
+      <div class="Title-content">
+        <div class="title-text">
+          <h1 style="color: white">Preguntas Frecuentes</h1>
+          <p>
+            En esta sección encontrarás respuestas a las preguntas más comunes
+            sobre nuestros productos, servicios y políticas. Si no encuentras la
+            información que buscas, no dudes en contactarnos.
+          </p>
+        </div>
+        <div class="title-image-wrap">
           <img
-            src="../Multimedia/Img/Sauvage 2.jpg"
-            alt="Miniatura 1 del producto"
-            class="gallery-thumbnail"
-          />
-          <img
-            src="../Multimedia/Img/Sauvage 3.png"
-            alt="Miniatura 2 del producto"
-            class="gallery-thumbnail"
-          />
-        </aside>
-        <!-- Imagen principal del producto -->
-        <div class="product-main-image">
-          <img
-            src="../Multimedia/Img/Sauvage.png"
-            alt="Imagen principal del producto"
+            src="../Multimedia/Img/Preguntas.png"
+            alt="Imagen Preguntas Frecuentes"
+            class="title-img"
           />
         </div>
-        <!-- Nombre, precio, descripcion de uso y contacto por WhatsApp -->
-        <aside class="product-info">
-          <h1 class="product-name">
-            Sauvage Eau de Toilette, de Christian Dior
-          </h1>
-          <p class="product-price">₡100.000 I.V.A.I</p>
-          <p class="product-description">
-            Perfil de uso: Pensada para hombres libres, modernos y decididos, es
-            ideal para uso diario durante todo el año, con buena duración y una
-            estela reconocible. Es uno de los perfumes masculinos más vendidos
-            del mundo, aunque genera opiniones divididas: para muchos es un
-            clásico "todo terreno", mientras que otros lo consideran demasiado
-            simple frente a otras creaciones de Dior.
-          </p>
-          <div class="whatsapp-contact">
-            <img
-              src="../Multimedia/Img/Whatsapp Icon.png"
-              alt="Logo de WhatsApp"
-              width="30"
-              height="30"
-            />
-            <p>
-              Para mas información: <br />
-              +506 6039 1808
-            </p>
-          </div>
-        </aside>
-      </section>
+      </div>
+    </section>
 
-      <!-- Descripcion del producto -->
-      <section class="product-description">
-        <p>
-          La fuerte ráfaga cítrica de Sauvage Eau de Toilette está potentemente
-          anclada por la nobleza ambarina del ambroxán, el elemí resinoso y las
-          maderas. La fragancia se presenta como radicalmente fresca, cruda y
-          noble a la vez, con una composición donde predominan ingredientes
-          naturales cuidadosamente seleccionados.
-        </p>
+    <!--------------------------------------------------------->
+    <!-------------------------MAIN---------------------------->
+    <!--------------------------------------------------------->
+
+    <main>
+      <!-- Acordeon oficial de Bootstrap 5.3, variante "flush" (sin bordes ni
+           esquinas redondeadas): https://getbootstrap.com/docs/5.3/components/accordion/
+           data-bs-theme="dark" activa el modo oscuro propio de Bootstrap para
+           que los colores del componente combinen con el fondo del sitio -->
+      <div
+        class="accordion accordion-flush"
+        id="faqAccordion"
+        data-bs-theme="dark"
+      >
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq1"
+              aria-expanded="false"
+              aria-controls="faq1"
+            >
+              <i class="bi bi-check-circle faq-icon"></i>
+              Los perfumes son originales?
+            </button>
+          </h2>
+          <div
+            id="faq1"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Sí. En Celestial Woods garantizamos que el 100% de nuestras
+              fragancias son originales y auténticas. Trabajamos directamente
+              con distribuidores autorizados y cada perfume cuenta con su código
+              de lote y sellos de seguridad.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq2"
+              aria-expanded="false"
+              aria-controls="faq2"
+            >
+              <i class="bi bi-truck faq-icon"></i>
+              Realizan envios?
+            </button>
+          </h2>
+          <div
+            id="faq2"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Sí. Realizamos envíos a nivel nacional en todo Costa Rica.
+              Contamos con diferentes métodos de envío para que elijas el que
+              mejor se adapte a tus tiempos.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq3"
+              aria-expanded="false"
+              aria-controls="faq3"
+            >
+              <i
+                class="bi bi-question-circle faq-icon"
+                style="color: black"
+              ></i>
+              Que métodos de pago aceptan?
+            </button>
+          </h2>
+          <div
+            id="faq3"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Aceptamos SINPE Móvil y pago en efectivo contra entrega.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq4"
+              aria-expanded="false"
+              aria-controls="faq4"
+            >
+              <i class="bi bi-bag-check faq-icon"></i>
+              Como realizo una compra?
+            </button>
+          </h2>
+          <div
+            id="faq4"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Comprar en Celestial Woods es muy sencillo: Elige tu fragancia en
+              nuestro Catálogo o Guía de Fragancias y completa tus datos de
+              envío Selecciona tu método de pago: SINPE Móvil o pago en efectivo
+              contra entrega Confirma tu pedido y nosotros nos encargamos del
+              resto
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq5"
+              aria-expanded="false"
+              aria-controls="faq5"
+            >
+              <i class="bi bi-arrow-clockwise faq-icon"></i>
+              Puedo cambiar o devolver un producto?
+            </button>
+          </h2>
+          <div
+            id="faq5"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Aceptamos devoluciones únicamente si el perfume llegó dañado o con
+              defectos de fábrica. En ese caso, contáctanos dentro de las
+              primeras 24 horas de recibido y te daremos una solución inmediata:
+              cambio o reembolso. Por temas de higiene y seguridad, no aceptamos
+              devoluciones ni cambios de perfumes que ya hayan sido abiertos o
+              utilizados.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq6"
+              aria-expanded="false"
+              aria-controls="faq6"
+            >
+              <i class="bi bi-currency-dollar faq-icon"></i>
+              Los precios pueden cambiar?
+            </button>
+          </h2>
+          <div
+            id="faq6"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Sí. El precio puede variar dependiendo de la concentración de la
+              fragancia, su intensidad y exclusividad. Cada perfume tiene un
+              valor que refleja su calidad y composición. Aun así, en Celestial
+              Woods trabajamos para que el lujo sea accesible para todos.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq7"
+              aria-expanded="false"
+              aria-controls="faq7"
+            >
+              <i class="bi bi-person-arms-up faq-icon"></i>
+              Como puedo saber cual perfume elegir?
+            </button>
+          </h2>
+          <div
+            id="faq7"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Te ayudamos a encontrar tu esencia ideal. En nuestra Guía de
+              Fragancias puedes explorar por notas, género y ocasión. Además,
+              nuestro equipo de asesores está disponible para recomendarte la
+              fragancia perfecta según tu estilo, personalidad y el momento que
+              quieras marcar.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq8"
+              aria-expanded="false"
+              aria-controls="faq8"
+            >
+              <i class="bi bi-house-door faq-icon" style="color: black"></i>
+              Tienen tienda física?
+            </button>
+          </h2>
+          <div
+            id="faq8"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Actualmente somos una tienda virtual. Esto nos permite ofrecerte
+              mejores precios y llevar Celestial Woods hasta la puerta de tu
+              casa en todo el país.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloque final invitando a contactar por WhatsApp  -->
+      <section class="Class-Ayuda">
+        <div class="Class-Ayuda-content">
+          <div class="Class-Ayuda-icon">
+            <i class="bi bi-whatsapp"></i>
+          </div>
+          <div class="Class-Ayuda-text" style="color: white">
+            <h4>Necesitas ayuda?</h4>
+            <p>Escribenos por WhatsApp y con gusto te atenderemos.</p>
+            <p class="Class-Ayuda-number">57 300 000 00 00</p>
+          </div>
+        </div>
       </section>
     </main>
 
-    <!-- Pie de pagina -->
-
-    <footer class="bg-black text-light  pt-5 border-top border-1 border-warning">
-
+    <!--------------------------------------------------------->
+    <!-------------------PIE DE LA PÁGINA---------------------->
+    <!--------------------------------------------------------->
+    <footer class="bg-black text-light pt-5 border-top border-1 border-warning">
       <div class="container">
-
-          <!-- Contenido principal -->
-          <div class="row g-4">
-
-              <!-- Logo -->
-              <div class="col-12 col-lg-3 text-center">
-                  <img
-                      src="../Multimedia/Img/Logo_Celestial_Woods.png"
-                      alt="Logo Celestial & Woods"
-                      class="img-fluid"
-                      style="max-width: 160px;"
-                  >
-              </div>
-
-
-              <!-- Menú de navegación -->
-              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
-
-                  <h3 class="h5 fw-bold mb-3">
-                      Menú Navegación
-                  </h3>
-
-                  <ul class="list-unstyled">
-
-                      <li class="mb-2">
-                          <a href="../index.html" class="text-light text-decoration-none nav-link-footer">
-                              Inicio
-                          </a>
-                      </li>
-
-                      <li class="mb-2">
-                          <a href="../Paginas/Catalogo_Productos.html"
-                            class="text-light text-decoration-none nav-link-footer">
-                              Catálogo
-                          </a>
-                      </li>
-
-                      <li class="mb-2">
-                          <a href="../Paginas/Guia_fragancias.html"
-                            class="text-light text-decoration-none nav-link-footer">
-                              Guía de Fragancias
-                          </a>
-                      </li>
-
-                      <li class="mb-2">
-                          <a href="../Paginas/Preguntas.html"
-                            class="text-light text-decoration-none nav-link-footer">
-                              Preguntas Frecuentes
-                          </a>
-                      </li>
-
-                      <li class="mb-2">
-                          <a href="../Paginas/Informacion.html"
-                            class="text-light text-decoration-none nav-link-footer">
-                              Quiénes somos
-                          </a>
-                      </li>
-
-                      <li>
-                          <a href="../Paginas/Contacto.html"
-                            class="text-light text-decoration-none nav-link-footer">
-                              Contacto
-                          </a>
-                      </li>
-
-                  </ul>
-
-              </div>
-
-
-              <!-- Redes sociales + WhatsApp -->
-              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
-
-                  <!-- Síguenos -->
-                  <section class="mb-4">
-
-                      <h3 class="h5 fw-bold pb-4">
-                          Síguenos
-                      </h3>
-
-                      <div class="d-flex gap-3 justify-content-center">
-
-                          <a href="#" class="text-light fs-4 social-icon">
-                              <i class="bi bi-facebook m-2"></i>
-                          </a>
-
-                          <a href="#" class="text-light fs-4 social-icon">
-                              <i class="bi bi-instagram m-2"></i>
-                          </a>
-
-                          <a href="#" class="text-light fs-4 social-icon">
-                              <i class="bi bi-tiktok m-2"></i>
-                          </a>
-
-                      </div>
-
-                  </section>
-
-
-                  <!-- WhatsApp -->
-                  <section class="footer-whatsapp text-center pb-4">
-
-                      <h3 class="h5 fw-bold mt-2 pt-4">
-                          <i class="bi bi-whatsapp "></i>
-                          Compra por WhatsApp
-                      </h3>
-
-                      <a href="#" class="text-light text-decoration-none">
-                          +506 6000 0000
-                      </a>
-
-                  </section>
-
-              </div>
-
-
-              <!-- Horarios + información legal -->
-              <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
-
-                  <!-- Horarios -->
-                  <section class="mb-4">
-
-                      <h3 class="h5 fw-bold mb-3 pt-4 pb-4">
-                          <i class="bi bi-clock"></i>
-                          Horario de atención
-                      </h3>
-
-                      <ul class="list-unstyled">
-
-                          <li class="mb-2">
-                              <i class="bi bi-calendar"></i>
-                              <strong>Lunes a Viernes:</strong>
-                              8:00 a.m. - 6:00 p.m.
-                          </li>
-
-                          <li class="mb-2">
-                              <i class="bi bi-calendar"></i>
-                              <strong>Sábado:</strong>
-                              8:00 a.m. - 6:00 p.m.
-                          </li>
-
-                          <li>
-                              <i class="bi bi-calendar"></i>
-                              <strong>Domingo:</strong>
-                              Cerrado
-                          </li>
-
-                      </ul>
-
-                  </section>
-
-
-                  
-              </div>
-
+        <!-- Contenido principal -->
+        <div class="row g-4">
+          <!-- Logo -->
+          <div class="col-12 col-lg-3 text-center">
+            <img
+              src="../Multimedia/Img/Logo_Celestial_Woods.png"
+              alt="Logo Celestial & Woods"
+              class="img-fluid"
+              style="max-width: 160px"
+            />
           </div>
 
+          <!-- Menú de navegación -->
+          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+            <h3 class="h5 fw-bold mb-3">Menú Navegación</h3>
+
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="../index.html"
+                  class="text-light text-decoration-none nav-link-footer"
+                >
+                  Inicio
+                </a>
+              </li>
+
+              <li class="mb-2">
+                <a
+                  href="../Paginas/Catalogo_Productos.html"
+                  class="text-light text-decoration-none nav-link-footer"
+                >
+                  Catálogo
+                </a>
+              </li>
+
+              <li class="mb-2">
+                <a
+                  href="../Paginas/Preguntas.html"
+                  class="text-light text-decoration-none nav-link-footer"
+                >
+                  Guía de Fragancias
+                </a>
+              </li>
+
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-light text-decoration-none nav-link-footer"
+                >
+                  Preguntas Frecuentes
+                </a>
+              </li>
+
+              <li class="mb-2">
+                <a
+                  href="../Paginas/Informacion.html"
+                  class="text-light text-decoration-none nav-link-footer"
+                >
+                  Quiénes somos
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="../Paginas/Contacto.html"
+                  class="text-light text-decoration-none nav-link-footer"
+                >
+                  Contacto
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Redes sociales + WhatsApp -->
+          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+            <!-- Síguenos -->
+            <section class="mb-4">
+              <h3 class="h5 fw-bold pb-4">Síguenos</h3>
+
+              <div class="d-flex gap-3 justify-content-center">
+                <a href="#" class="text-light fs-4 social-icon">
+                  <i class="bi bi-facebook m-2"></i>
+                </a>
+
+                <a href="#" class="text-light fs-4 social-icon">
+                  <i class="bi bi-instagram m-2"></i>
+                </a>
+
+                <a href="#" class="text-light fs-4 social-icon">
+                  <i class="bi bi-tiktok m-2"></i>
+                </a>
+              </div>
+            </section>
+
+            <!-- WhatsApp -->
+            <section class="footer-whatsapp text-center pb-4">
+              <h3 class="h5 fw-bold mt-2 pt-4">
+                <i class="bi bi-whatsapp"></i>
+                Compra por WhatsApp
+              </h3>
+
+              <a href="#" class="text-light text-decoration-none">
+                +506 6000 0000
+              </a>
+            </section>
+          </div>
+
+          <!-- Horarios + información legal -->
+          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start">
+            <!-- Horarios -->
+            <section class="mb-4">
+              <h3 class="h5 fw-bold mb-3 pt-4 pb-4">
+                <i class="bi bi-clock"></i>
+                Horario de atención
+              </h3>
+
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="bi bi-calendar"></i>
+                  <strong>Lunes a Viernes:</strong>
+                  8:00 a.m. - 6:00 p.m.
+                </li>
+
+                <li class="mb-2">
+                  <i class="bi bi-calendar"></i>
+                  <strong>Sábado:</strong>
+                  8:00 a.m. - 6:00 p.m.
+                </li>
+
+                <li>
+                  <i class="bi bi-calendar"></i>
+                  <strong>Domingo:</strong>
+                  Cerrado
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
+      </div>
 
-        <!-- Copyright -->
-        <div class="row copyright w-100 mt-5">
-
+      <!-- Copyright -->
+      <div class="row copyright w-100 mt-5">
+        <div class="col-12 text-center mt-1 py-4">
+          <p class="mb-0">
+            &copy; 2026 Celestial & Woods. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
     </footer>
 
+    <!-- Bundle de Bootstrap (incluye Popper): necesario para que el
+         acordeon funcione, ya que usa data-bs-toggle="collapse" -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../Java/main.js"></script>
-    <!--Se pone al final porque ocupa primero haber leido todo el html-->
   </body>
 </html>
