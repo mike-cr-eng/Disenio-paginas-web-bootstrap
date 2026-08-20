@@ -7,11 +7,9 @@
 }
 
 .About-Content {
-  /* Layout que agrupa el bloque de texto (`.About-Text`) y la imagen
-     (`.About-Image`). Mobile: columna; Desktop: fila (ver @media). */
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .About-Image {
@@ -64,21 +62,17 @@
 }
 
 .main-subtitle {
-  /* Subtítulo para secciones internas (ej. pilares). Centrado en
-     mobile, alineado a la izquierda en desktop. */
+  /* Subtítulo para secciones internas. */
   font-family: "Cormorant Garamond", sans-serif;
   font-weight: 700;
   font-size: 1.7rem;
   color: #d4b483;
-  text-align: center;
   margin-bottom: 1.75rem;
+  text-align: center;
 }
 
+/* el acomodo en columnas lo maneja Bootstrap, aqui solo se ajusta el margen */
 .main-pillars {
-  /* Contenedor de las tarjetas tipo 'pilar'. Mobile: columna; desktop: fila. */
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
@@ -88,6 +82,7 @@
   background-color: #2b2b2b;
   border-radius: 1.25rem;
   padding: 1.75rem 1.5rem;
+  height: 100%;
 
   display: grid;
   grid-template-columns: auto 1fr;
@@ -138,24 +133,19 @@
 }
 
 @media screen and (min-width: 950px) {
-  /* Ajustes para pantallas grandes: convertir layout a dos columnas
-     y ajustar tamaños/paddings para mayor jerarquía. */
   .Main-content {
     padding: 3rem 0 5rem;
   }
 
   .About-Content {
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
     gap: 3rem;
   }
 
-  .About-Text {
-    flex: 0.9;
-  }
-
+  .About-Text,
   .About-Image {
-    flex: 1.1;
+    flex: 1 1 50%;
   }
 
   .main-title {
@@ -174,18 +164,15 @@
 
   .main-subtitle {
     font-size: 1.5rem;
-    text-align: left;
     margin-bottom: 2rem;
+    text-align: left;
   }
 
   .main-pillars {
-    flex-direction: row;
-    gap: 2rem;
     margin-bottom: 3rem;
   }
 
   .pillar {
-    flex: 1;
     padding: 2rem 1.75rem;
     transition: transform 0.3s ease;
   }

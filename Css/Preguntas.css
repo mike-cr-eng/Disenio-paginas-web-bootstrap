@@ -2,260 +2,178 @@
   Preguntas.css - comentarios distribuidos
 ====================================================================================*/
 
-main hr {
-  border: none;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.06);
-  width: 100%;
-  margin: 0.5rem auto;
-}
 .Title {
-  /* Bloque de cabecera: título, descripción e imagen.
-     Mobile: columna; en @media se cambia a grid para colocar imagen a la derecha. */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
   width: 80%;
   margin: 0 auto;
   padding: 2rem 0 1.5rem;
 }
 
-.Title h1 {
+.Title-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.title-image-wrap {
+  width: 100%;
+}
+
+.title-text h1 {
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   font-size: 2rem;
   line-height: 1.15;
 }
 
-.Title p {
-  /* Pequeña descripción contextual bajo el título. */
+.title-text p {
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
   line-height: 1.6;
   color: #d9d9d9;
+  margin-top: 1rem;
 }
 
-.Title img {
-  /* Imagen hero del bloque; en desktop se sitúa a la derecha. */
-  width: 100%;
+.title-img {
   max-height: 220px;
+  width: 100%;
   object-fit: cover;
   border-radius: 1rem;
+  display: block;
 }
 
-.Details-question {
-  /* Fila que contiene el icono y el elemento `<details>` para una pregunta. */
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  padding: 0.4rem 0;
-}
-
-.Details-question > i {
-  /* Icono circular a la izquierda de la pregunta. */
+.faq-icon {
   flex-shrink: 0;
   width: 2.25rem;
   height: 2.25rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: linear-gradient(135deg, #8d6e2f, #cba135, #f2d27a);
   color: black;
   font-size: 1.05rem;
+  margin-right: 0.75rem;
 }
 
-.Details-question details {
-  /* Caja que envuelve el summary y el contenido desplegable. */
-  flex: 1;
-  background: #2b2b2b;
-  border-radius: 0.75rem;
-  overflow: hidden;
-}
-
-.Details-question summary {
-  /* Encabezado clickable del detalle. Se maquilla para ocultar marcador nativo. */
-  list-style: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0.85rem 1rem;
+/* El acordeon (main.html) usa el componente oficial .accordion.accordion-flush
+   de Bootstrap 5.3, con la animacion y el data-bs-toggle manejados por el JS
+   del framework. Aqui solo se ajustan sus colores/tipografia mediante las
+   variables CSS oficiales (--bs-accordion-*), sin tocar su estructura. */
+#faqAccordion {
+  --bs-accordion-bg: #2b2b2b;
+  --bs-accordion-active-bg: #2b2b2b;
+  --bs-accordion-active-color: #cba135;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba(203, 161, 53, 0.35);
   font-family: "Montserrat", sans-serif;
+}
+
+#faqAccordion .accordion-button {
   font-weight: 600;
   font-size: 0.82rem;
 }
 
-.Details-question summary::-webkit-details-marker {
-  /* Oculta el marcador por defecto en WebKit para usar un pseudo `::after`. */
-  display: none;
-}
-
-.Details-question summary::after {
-  /* Indicador visual para abrir/cerrar; rota cuando está abierto. */
-  content: "+";
-  flex-shrink: 0;
-  font-size: 1.3rem;
-  font-weight: 300;
-  transition: transform 0.25s ease;
-}
-
-.Details-question details[open] summary::after {
-  /* Rotación del símbolo cuando el detalle está abierto. */
-  transform: rotate(45deg);
-}
-
-.Details-question details p {
-  /* Contenido de la respuesta dentro del detalle. */
-  padding: 0 1rem 1rem;
-  font-family: "Montserrat", sans-serif;
+#faqAccordion .accordion-body {
   font-size: 0.78rem;
   line-height: 1.6;
-  color: #cccccc;
 }
 
+/* Bloque final de ayuda por WhatsApp */
 .Class-Ayuda {
-  /* Tarjeta de ayuda destacada: borde dorado y botón visual al final. */
+  background-color: #000000;
+  border: 1px solid #cba135;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 2rem auto;
+}
+
+.Class-Ayuda-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   text-align: center;
-  border: 1px solid #cba135;
-  border-radius: 1rem;
-  padding: 1.5rem 1.25rem;
-  margin: 1.5rem 0 2rem;
 }
 
-.Class-Ayuda div {
-  /* Icono circular dentro de la tarjeta de ayuda. */
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #8d6e2f, #cba135, #f2d27a);
-  color: black;
-  font-size: 1.5rem;
+.Class-Ayuda-icon {
+  font-size: 2rem;
+  color: #cba135;
 }
 
-.Class-Ayuda h4 {
-  /* Título interno de la tarjeta de ayuda. */
+.Class-Ayuda-text h4 {
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
-  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
 }
 
-.Class-Ayuda p {
-  /* Texto de apoyo dentro de la tarjeta. */
+.Class-Ayuda-text p {
   font-family: "Montserrat", sans-serif;
   font-size: 0.82rem;
   color: #cccccc;
+  margin-bottom: 0.25rem;
 }
 
-.Class-Ayuda p:last-of-type {
-  /* Botón/etiqueta final destacado dentro de la tarjeta. */
-  background: linear-gradient(135deg, #8d6e2f, #cba135, #f2d27a);
-  color: black;
-  font-weight: 600;
-  padding: 0.5rem 1.25rem;
-  border-radius: 1.5rem;
-  margin-top: 0.25rem;
+.Class-Ayuda-number {
+  font-weight: 700;
+  color: #cba135 !important;
 }
 
 /* =================================================================================
-    CONFIGURACIÓN DESKTOP
+    CONFIGURACION DESKTOP
 ==================================================================================== */
 
 @media screen and (min-width: 576px) {
-  /* Ajustes para desktop pequeño: coloca la imagen a la derecha y
-     mejora tamaños/espaciados para legibilidad. */
   .Title {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    align-items: center;
-    column-gap: 3rem;
     padding: 3rem 0;
   }
 
-  .Title h1 {
-    grid-column: 1;
-    grid-row: 1;
+  .Title-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .title-text,
+  .title-image-wrap {
+    flex: 1 1 50%;
+  }
+
+  .title-text h1 {
     font-size: 2.75rem;
   }
 
-  .Title p {
-    grid-column: 1;
-    grid-row: 2;
-    align-self: start;
+  .title-text p {
     font-size: 1rem;
     max-width: 32rem;
   }
 
-  .Title img {
-    grid-column: 2;
-    grid-row: 1 / 3;
+  .title-img {
     max-height: 260px;
-    justify-self: end;
   }
 
-  .Details-question {
-    gap: 1.25rem;
-    padding: 0.6rem 0;
-  }
-
-  .Details-question > i {
+  .faq-icon {
     width: 2.75rem;
     height: 2.75rem;
     font-size: 1.3rem;
   }
 
-  .Details-question summary {
-    padding: 1.1rem 1.5rem;
+  #faqAccordion .accordion-button {
     font-size: 1.05rem;
   }
 
-  .Details-question details p {
-    padding: 0 1.5rem 1.25rem;
+  #faqAccordion .accordion-body {
     font-size: 0.9rem;
   }
 
   .Class-Ayuda {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    column-gap: 1.5rem;
-    text-align: left;
     max-width: 34rem;
     margin: 2rem auto 3rem;
     padding: 2rem;
   }
 
-  .Class-Ayuda div {
-    grid-column: 1;
-    grid-row: 1 / 4;
-    width: 3.75rem;
-    height: 3.75rem;
-    font-size: 1.75rem;
-  }
-
-  .Class-Ayuda h4 {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .Class-Ayuda p:nth-of-type(1) {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .Class-Ayuda p:last-of-type {
-    grid-column: 2;
-    grid-row: 3;
-    justify-self: start;
+  .Class-Ayuda-content {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
   }
 }
