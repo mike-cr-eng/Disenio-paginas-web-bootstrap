@@ -6,6 +6,7 @@
   --contact-border: #8b6d34;
   --contact-accent: #d6b15f;
   --contact-muted: #b6b0a5;
+  --contact-white: #ffffff;
 }
 
 .main-content {
@@ -85,7 +86,6 @@
 }
 
 .contact-form-section::before {
-  content: "Envíanos un mensaje";
   display: block;
   font-family: "Montserrat", sans-serif;
   font-size: 0.95rem;
@@ -95,6 +95,15 @@
 
 .form-group {
   margin-bottom: 1.1rem;
+}
+
+.contact-form .form-control::placeholder {
+  color: var(--contact-muted);
+  opacity: 1;
+}
+
+.contact-form .form-control:focus {
+  background-color: black;
 }
 
 .form-group label {

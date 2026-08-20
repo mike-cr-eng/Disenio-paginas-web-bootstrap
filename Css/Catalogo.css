@@ -17,8 +17,28 @@
   color: inherit;
 }
 
+.card {
+  background-color: #131313;
+}
+
+.card-title,
+.card-text {
+  color: white;
+}
+
+.pagination .page-link {
+  background-color: #000000 !important;
+  border-color: #8b6d34 !important;
+  color: #ffffff !important;
+}
+
 .breadcrumb {
   display: none;
+}
+
+.filter-options .filtro-precio:focus {
+  background-color: var(--catalog-surface);
+  color: var(--catalog-text);
 }
 
 /* Contenedor principal centrado */
@@ -65,7 +85,7 @@
 }
 
 /* Barra de búsqueda */
-.catalog input[type="text"] {
+.container input[type="text"] {
   width: 100%;
   height: 2.25rem;
   border: 1px solid var(--catalog-border);
@@ -80,9 +100,9 @@
     background-color 0.2s ease;
 }
 
-/* Color del texto de ejemplo en el buscador */
-.catalog input[type="text"]::placeholder {
+.container input[type="text"]::placeholder {
   color: var(--catalog-muted);
+  opacity: 1;
 }
 
 /* Efecto cuando haces clic en el buscador (focus) */
@@ -178,6 +198,7 @@
   background: rgba(255, 255, 255, 0.04);
   padding: 0.4rem 0.55rem;
   font: inherit;
+  color: var(--catalog-text);
 }
 
 /* Cuadrícula para mostrar los productos (4 columnas en pantallas grandes) */
